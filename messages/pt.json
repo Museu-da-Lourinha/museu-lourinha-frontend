@@ -1,0 +1,17 @@
+{
+  "Nav": {
+    "museu": "Museu",
+    "visitar": "Visitar",
+    "geal": "GEAL",
+    "educacao": "Educação",
+    "investigacao": "Investigação",
+    "loja": "Loja"
+  },
+  "Home": {
+    "title": "Museu da Lourinhã",
+    "welcome": "Bem-vindo ao site do museu. Conectado ao Strapi CMS.",
+    "news": "Notícias",
+    "noNews": "Nenhuma notícia ainda.",
+    "setupHint": "Inicie o Strapi, acesse o admin, crie o primeiro usuário e adicione notícias no Content Manager."
+  }
+}
