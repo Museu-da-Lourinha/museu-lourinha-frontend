@@ -6,12 +6,11 @@ import { usePathname, useRouter } from "@/i18n/navigation";
 import { Link } from "@/i18n/navigation";
 
 const NAV_LINKS = [
-  { key: "museu", href: "/museu" },
-  { key: "visitar", href: "/visitar" },
+  { key: "sobreNos", href: "/sobre-nos" },
   { key: "geal", href: "/geal" },
-  { key: "educacao", href: "/educacao" },
-  { key: "investigacao", href: "/investigacao" },
-  { key: "loja", href: "/loja" },
+  { key: "visitar", href: "/visitar" },
+  { key: "lojaOnline", href: "/loja-online" },
+  { key: "guardioes", href: "/guardioes" },
 ] as const;
 
 export function Navbar({ locale }: { locale: string }) {

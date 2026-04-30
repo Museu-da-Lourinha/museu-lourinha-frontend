@@ -1,11 +1,10 @@
 {
   "Nav": {
-    "museu": "Museu",
-    "visitar": "Visitar",
+    "sobreNos": "Sobre Nós",
     "geal": "GEAL",
-    "educacao": "Educação",
-    "investigacao": "Investigação",
-    "loja": "Loja"
+    "visitar": "Visitar",
+    "lojaOnline": "Loja Online",
+    "guardioes": "Guardiões"
   },
   "Home": {
     "title": "Museu da Lourinhã",
@@ -13,5 +12,24 @@
     "news": "Notícias",
     "noNews": "Nenhuma notícia ainda.",
     "setupHint": "Inicie o Strapi, acesse o admin, crie o primeiro usuário e adicione notícias no Content Manager."
+  },
+  "Error": {
+    "title": "Algo correu mal",
+    "description": "Ocorreu um erro inesperado. Por favor, tente novamente.",
+    "retry": "Tentar novamente"
+  },
+  "NotFound": {
+    "title": "Página não encontrada",
+    "description": "A página que procura não existe ou foi movida.",
+    "home": "Voltar ao início"
+  },
+  "Footer": {
+    "address": "Rua João Luís de Moura, 2530-158 Lourinhã",
+    "explore": "Explorar",
+    "navLabel": "Navegação do rodapé",
+    "schedule": "Horário",
+    "hours": "Ter - Dom: 10h00 - 18h00",
+    "closedDay": "Encerrado à segunda-feira",
+    "rights": "Todos os direitos reservados."
   }
 }

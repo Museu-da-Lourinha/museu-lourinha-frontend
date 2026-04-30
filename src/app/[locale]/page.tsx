@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { strapiClient } from "@/lib/strapi";
-import { routing } from "@/i18n/routing";
+import type { NewsResponse } from "@/types/strapi";
 
 const NEWS_QUERY = `
   query {
@@ -14,18 +14,6 @@ const NEWS_QUERY = `
     }
   }
 `;
-
-type NewsItem = {
-  documentId: string;
-  title: string;
-  content: string;
-  slug: string;
-  publishedAt: string | null;
-};
-
-type NewsResponse = {
-  newsItems: NewsItem[];
-};
 
 async function getNews() {
   try {

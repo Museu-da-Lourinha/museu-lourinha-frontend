@@ -3,14 +3,15 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
-const VALID_SECTIONS = [
-  "museu",
-  "visitar",
-  "geal",
-  "educacao",
-  "investigacao",
-  "loja",
-] as const;
+const SECTION_TO_NAV_KEY = {
+  "sobre-nos": "sobreNos",
+  geal: "geal",
+  visitar: "visitar",
+  "loja-online": "lojaOnline",
+  guardioes: "guardioes",
+} as const;
+
+type SectionSlug = keyof typeof SECTION_TO_NAV_KEY;
 
 type Props = {
   params: Promise<{ locale: string; section: string }>;
@@ -18,7 +19,10 @@ type Props = {
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    VALID_SECTIONS.map((section) => ({ locale, section }))
+    (Object.keys(SECTION_TO_NAV_KEY) as SectionSlug[]).map((section) => ({
+      locale,
+      section,
+    }))
   );
 }
 
@@ -29,13 +33,13 @@ export default async function SectionPage({ params }: Props) {
     notFound();
   }
 
-  if (!VALID_SECTIONS.includes(section as (typeof VALID_SECTIONS)[number])) {
+  if (!(section in SECTION_TO_NAV_KEY)) {
     notFound();
   }
 
   setRequestLocale(locale);
   const t = await getTranslations("Nav");
-  const label = t(section as (typeof VALID_SECTIONS)[number]);
+  const label = t(SECTION_TO_NAV_KEY[section as SectionSlug]);
 
   return (
     <div className="min-h-screen bg-stone-50 font-sans dark:bg-stone-950">
