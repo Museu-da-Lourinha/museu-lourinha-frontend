@@ -1,0 +1,80 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run lint)",
+      "Bash(npm run build)",
+      "Bash(npm run dev)",
+      "Bash(npm audit)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(git status)",
+      "Bash(git log*)",
+      "Bash(git diff*)",
+      "Bash(git branch*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm run lint 2>/dev/null || true",
+            "timeout": 30,
+            "statusMessage": "Running lint..."
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "if": "Bash(git commit*)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm run build 2>&1 | tail -5; EXIT=${PIPESTATUS[0]}; if [ $EXIT -ne 0 ]; then echo '{\"decision\":\"block\",\"reason\":\"Build failed — fix errors before committing.\"}'; fi",
+            "timeout": 120,
+            "statusMessage": "Verifying build..."
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "if": "Bash(gh pr create*)",
+        "hooks": [
+          {
+            "type": "agent",
+            "prompt": "Run a security audit on the changed files in this branch. Run git diff main...HEAD --name-only to find changed files, then read each one. Check for: XSS (dangerouslySetInnerHTML, unsanitized input), exposed secrets or API keys, NEXT_PUBLIC_ env vars with sensitive data, GraphQL injection, insecure Next.js config, and i18n locale path traversal. Also run npm audit. Report any issues found as JSON: {\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"additionalContext\":\"SECURITY: <findings>\"}}. If critical issues are found, block the PR with: {\"decision\":\"block\",\"reason\":\"Security issues found: <summary>\"}.",
+            "timeout": 120,
+            "statusMessage": "Security audit..."
+          },
+          {
+            "type": "agent",
+            "prompt": "Run an accessibility audit on the changed files in this branch. Run git diff main...HEAD --name-only to find changed .tsx files, then read each one. Check for: missing alt text on images, missing aria labels, non-semantic HTML (divs used as buttons), missing heading hierarchy, color contrast issues in Tailwind classes, keyboard navigation problems, missing lang attributes, and forms without labels. Report findings as JSON: {\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"additionalContext\":\"A11Y: <findings>\"}}. If critical a11y issues are found (missing alt text, non-semantic interactive elements), block with: {\"decision\":\"block\",\"reason\":\"Accessibility issues found: <summary>\"}.",
+            "timeout": 120,
+            "statusMessage": "Accessibility audit..."
+          },
+          {
+            "type": "agent",
+            "prompt": "Check translation consistency. Read messages/pt.json and messages/en.json. Compare all keys -- report any key that exists in one file but not the other. Then run a search in src/ for all useTranslations and t() calls to find keys used in code but missing from the JSON files. Also look for hardcoded user-facing strings in changed .tsx files (run git diff main...HEAD --name-only to find them). Report findings as JSON: {\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"additionalContext\":\"I18N: <findings>\"}}. If there are missing translation keys that would cause runtime errors, block with: {\"decision\":\"block\",\"reason\":\"Missing translations: <summary>\"}.",
+            "timeout": 90,
+            "statusMessage": "Translation check..."
+          },
+          {
+            "type": "agent",
+            "prompt": "Review code quality of changed files. Run git diff main...HEAD --name-only to find changed files, then read each one. Check for: duplicated code, functions over 50 lines, deeply nested conditionals, any types in TypeScript, unused imports/variables, client components that could be server components, missing TypeScript interfaces for props. Report findings as JSON: {\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"additionalContext\":\"REFACTOR: <findings>\"}}. Only block for egregious issues (widespread any usage, duplicated logic across files) with: {\"decision\":\"block\",\"reason\":\"Code quality issues: <summary>\"}.",
+            "timeout": 90,
+            "statusMessage": "Code quality review..."
+          },
+          {
+            "type": "agent",
+            "prompt": "Before this PR is created, update the project manual. Read docs/claude-code-guide.md, then check git log and git diff main...HEAD to understand what changed on this branch. Add documentation for any significant changes (new files, new patterns, architectural decisions, new dependencies) following the manual's existing structure and tone. The audience is high school interns -- explain concepts simply in Portuguese. Update the 'Ultima actualizacao' date. If nothing significant changed, do nothing.",
+            "timeout": 120,
+            "statusMessage": "Updating project manual..."
+          }
+        ]
+      }
+    ]
+  }
+}
