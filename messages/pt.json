@@ -8,10 +8,58 @@
   },
   "Home": {
     "title": "Museu da Lourinhã",
-    "welcome": "Bem-vindo ao site do museu. Conectado ao Strapi CMS.",
-    "news": "Notícias",
-    "noNews": "Nenhuma notícia ainda.",
-    "setupHint": "Inicie o Strapi, acesse o admin, crie o primeiro usuário e adicione notícias no Content Manager."
+    "welcome": "Onde os dinossauros do Jurássico Superior se encontram com a história e a tradição da costa portuguesa."
+  },
+  "Hero": {
+    "eyebrow": "Museu da Lourinhã",
+    "tagline": "Onde os dinossauros do Jurássico se encontram com o mar.",
+    "lead": "Paleontologia, arqueologia, etnografia e um jardim jurássico — um só museu, oito séculos de histórias para descobrir.",
+    "ctaVisit": "Planear a sua visita",
+    "ctaExplore": "Explorar coleções"
+  },
+  "Highlights": {
+    "heading": "Quatro coleções, uma história",
+    "subtitle": "Cada secção do museu revela uma camada do território da Lourinhã — do mar profundo do Jurássico aos ofícios do quotidiano.",
+    "paleontologia": {
+      "name": "Paleontologia",
+      "description": "Esqueletos de dinossauros e ovos com embriões com 152 milhões de anos."
+    },
+    "arqueologia": {
+      "name": "Arqueologia",
+      "description": "Vestígios romanos, medievais e modernos do território da Lourinhã."
+    },
+    "etnografia": {
+      "name": "Etnografia",
+      "description": "Objetos do dia-a-dia, ofícios e tradições da comunidade local."
+    },
+    "jardim": {
+      "name": "Jardim Jurássico",
+      "description": "Plantas vivas que partilham o planeta com os dinossauros há milhões de anos."
+    }
+  },
+  "QuickAccess": {
+    "heading": "O que pode fazer hoje",
+    "visitar": {
+      "title": "Visitar o museu",
+      "description": "Horários, bilhetes e como chegar à Lourinhã.",
+      "cta": "Ver detalhes"
+    },
+    "lojaOnline": {
+      "title": "Loja online",
+      "description": "Réplicas, livros e recordações para levar uma parte do museu consigo.",
+      "cta": "Entrar na loja"
+    },
+    "guardioes": {
+      "title": "Tornar-se Guardião",
+      "description": "Apoie a missão do museu e a investigação paleontológica na Lourinhã.",
+      "cta": "Saber como"
+    }
+  },
+  "LatestNews": {
+    "heading": "Últimas notícias",
+    "subtitle": "Descobertas, exposições temporárias e novidades do museu.",
+    "viewAll": "Ver todas as notícias",
+    "empty": "Ainda sem notícias publicadas."
   },
   "Error": {
     "title": "Algo correu mal",
