@@ -1,17 +1,20 @@
 {
   "Nav": {
-    "museu": "Museum",
-    "visitar": "Visit",
-    "geal": "GEAL",
-    "educacao": "Education",
+    "home": "Home",
+    "visita": "Visit",
     "investigacao": "Research",
-    "loja": "Shop"
+    "educacao": "Learn",
+    "sobre": "About",
+    "contactos": "Contact",
+    "ticket": "Buy ticket"
+  },
+  "Top": {
+    "openToday": "Open · Tue–Sun · 10–18h",
+    "ticket": "Ticket €5 · Under 12 free",
+    "city": "Lourinhã · Portugal"
   },
   "Home": {
-    "title": "Museu da Lourinhã",
-    "welcome": "Welcome to the museum website. Connected to Strapi CMS.",
-    "news": "News",
-    "noNews": "No news yet.",
-    "setupHint": "Start Strapi, access the admin, create the first user and add news in the Content Manager."
+    "title": "Museu da Lourinhã · Where the Earth remembers",
+    "tagline": "Visit, scientific research and education at Museu da Lourinhã."
   }
 }

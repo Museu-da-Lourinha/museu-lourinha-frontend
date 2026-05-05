@@ -1,17 +1,20 @@
 {
   "Nav": {
-    "museu": "Museu",
-    "visitar": "Visitar",
-    "geal": "GEAL",
-    "educacao": "Educação",
+    "home": "Início",
+    "visita": "Visita",
     "investigacao": "Investigação",
-    "loja": "Loja"
+    "educacao": "Educação",
+    "sobre": "Sobre",
+    "contactos": "Contactos",
+    "ticket": "Comprar bilhete"
+  },
+  "Top": {
+    "openToday": "Aberto · Ter–Dom · 10–18h",
+    "ticket": "Bilhete €5 · <12 grátis",
+    "city": "Lourinhã · Portugal"
   },
   "Home": {
-    "title": "Museu da Lourinhã",
-    "welcome": "Bem-vindo ao site do museu. Conectado ao Strapi CMS.",
-    "news": "Notícias",
-    "noNews": "Nenhuma notícia ainda.",
-    "setupHint": "Inicie o Strapi, acesse o admin, crie o primeiro usuário e adicione notícias no Content Manager."
+    "title": "Museu da Lourinhã · Onde a Terra guarda memória",
+    "tagline": "Visita, investigação científica e educação no Museu da Lourinhã."
   }
 }

@@ -1,52 +1,67 @@
 @import "tailwindcss";
 
 /**
- * Design System – Museu da Lourinhã
- * Colors from Manual de Normas Gráficas (Graphic Norms Manual).
- * See: myDocs/design-system.md
+ * Museu da Lourinhã – Editorial Field Notes
+ * Paleta papel + tinta navy, com amarelo e terracota como acentos.
  */
 
 :root {
-  /* Paleta do manual – por secção do museu */
-  --color-azulao: #25408f;           /* PALEONTOLOGIA – Azulão */
-  --color-verde-lima: #dfda57;       /* PALEONTOLOGIA – Verde Lima */
-  --color-grena: #6e3058;            /* ARQUEOLOGIA – Grená */
-  --color-verde-agua: #deedcb;       /* ARQUEOLOGIA – Verde Água */
-  --color-laranja: #d25e39;           /* ETNOGRAFIA – Laranja */
-  --color-azul-claro: #adcdec;       /* ETNOGRAFIA – Azul Claro */
-  --color-verde-floresta: #226432;   /* JARDIM JURÁSSICO – Verde Floresta */
-  --color-lilas: #d3c8e3;            /* JARDIM JURÁSSICO – Lilás */
+  /* Paper / ink */
+  --color-paper: #0e1c4a;
+  --color-paper-soft: #15265f;
+  --color-paper-deep: #0a163c;
+  --color-ink: #f6efe1;
+  --color-ink-soft: #d5ddf3;
+  --color-ink-faint: #a9b6df;
+  --color-rule: rgba(246, 239, 225, 0.16);
+  --color-rule-strong: rgba(246, 239, 225, 0.28);
 
-  /* Primária e secundária (uso geral no site) */
-  --color-primary: var(--color-azulao);
-  --color-primary-dark: #1a3070;     /* Azulão escurecido para hover */
-  --color-primary-light: var(--color-azul-claro);
-  --color-secondary: var(--color-verde-floresta);
-  --color-secondary-dark: #1a4f28;   /* Verde Floresta escurecido para hover */
+  /* Accents */
+  --color-accent: #e7d34a;
+  --color-accent-deep: #c8b332;
+  --color-warm: #e7d34a;
+  --color-warm-deep: #c8b332;
+  --color-fossil: #836544;
 
-  /* Neutrals */
-  --color-background: #ffffff;
-  --color-foreground: #171717;
-  --color-muted: #525252;
-  --color-border: #e5e5e5;
+  /* Heritage palette (mantida para uso pontual decorativo) */
+  --color-azulao: #25408f;
+  --color-verde-lima: #dfda57;
+  --color-grena: #6e3058;
+  --color-verde-agua: #deedcb;
+  --color-laranja: #e7d34a;
+  --color-azul-claro: #adcdec;
+  --color-verde-floresta: #226432;
+  --color-lilas: #d3c8e3;
 
-  /* Semantic */
-  --color-success: #15803d;
-  --color-error: #dc2626;
-  --color-warning: #ca8a04;
-}
+  /* Aliases semânticos */
+  --color-background: var(--color-paper);
+  --color-foreground: var(--color-ink);
+  --color-muted: var(--color-ink-soft);
+  --color-border: var(--color-rule);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #0a0a0a;
-    --color-foreground: #ededed;
-    --color-muted: #a3a3a3;
-    --color-border: #262626;
-  }
+  /* Geometria */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --shadow-soft: 0 1px 2px rgba(14, 28, 74, 0.05), 0 14px 30px -18px rgba(14, 28, 74, 0.18);
+
+  /* Layout */
+  --container-max: 1240px;
 }
 
 @theme inline {
-  /* Paleta do manual */
+  --color-paper: var(--color-paper);
+  --color-paper-soft: var(--color-paper-soft);
+  --color-paper-deep: var(--color-paper-deep);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-ink-faint: var(--color-ink-faint);
+  --color-rule: var(--color-rule);
+  --color-rule-strong: var(--color-rule-strong);
+  --color-accent: var(--color-accent);
+  --color-accent-deep: var(--color-accent-deep);
+  --color-warm: var(--color-warm);
+  --color-warm-deep: var(--color-warm-deep);
+  --color-fossil: var(--color-fossil);
   --color-azulao: var(--color-azulao);
   --color-verde-lima: var(--color-verde-lima);
   --color-grena: var(--color-grena);
@@ -55,27 +70,110 @@
   --color-azul-claro: var(--color-azul-claro);
   --color-verde-floresta: var(--color-verde-floresta);
   --color-lilas: var(--color-lilas);
-  /* Primária e secundária */
-  --color-primary: var(--color-primary);
-  --color-primary-dark: var(--color-primary-dark);
-  --color-primary-light: var(--color-primary-light);
-  --color-secondary: var(--color-secondary);
-  --color-secondary-dark: var(--color-secondary-dark);
-  /* Neutrals e semantic */
   --color-background: var(--color-background);
   --color-foreground: var(--color-foreground);
   --color-muted: var(--color-muted);
   --color-border: var(--color-border);
-  --color-success: var(--color-success);
-  --color-error: var(--color-error);
-  --color-warning: var(--color-warning);
-  /* Tipografia – Manual de Normas Gráficas */
   --font-display: var(--font-dosis);
   --font-sans: var(--font-barlow);
+  --font-mono: var(--font-mono-system);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--color-background);
-  color: var(--color-foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans), "Inter", system-ui, -apple-system, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Display font for headings */
+.font-display {
+  font-family: var(--font-display), "Dosis", "Barlow", "Inter", system-ui, -apple-system, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), "Dosis", "Barlow", "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Eyebrow – etiqueta tipográfica reutilizada em todo o site */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 1.5rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+/* Linha-regra hairline */
+.rule {
+  height: 1px;
+  background: var(--color-rule);
+  width: 100%;
+  border: 0;
+}
+
+/* Marquee – ticker horizontal com info prática */
+@keyframes ml-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: ml-marquee 38s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
+    transform: none;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* Pequeno ruído editorial sobre fotos heroicas */
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  opacity: 0.18;
+  background-image: radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px);
+  background-size: 3px 3px;
 }
