@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { Navbar } from "@/components/Navbar";
+import { Header } from "@/components/site/Header";
 
 type Props = {
   children: React.ReactNode;
@@ -14,14 +15,20 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: Props) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Home" });
-  return {
-    title: t("title"),
-    description: t("welcome"),
-  };
-}
+export const metadata: Metadata = {
+  metadataBase: new URL("https://museulourinha.org"),
+  title: {
+    default: "Museu da Lourinhã",
+    template: "%s · Museu da Lourinhã",
+  },
+  description:
+    "Site institucional do Museu da Lourinhã — paleontologia jurássica, arqueologia regional, etnografia da costa oeste e programa educativo.",
+  openGraph: {
+    siteName: "Museu da Lourinhã",
+    type: "website",
+    locale: "pt_PT",
+  },
+};
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
@@ -35,11 +42,11 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <div
-        className="min-h-screen antialiased"
-      >
-        <Navbar locale={locale} />
-        <main className="pt-16">{children}</main>
+      <div className="flex min-h-screen flex-col bg-paper text-ink antialiased">
+        <Header locale={locale} />
+        <main id="main" className="flex-1">
+          {children}
+        </main>
       </div>
     </NextIntlClientProvider>
   );
