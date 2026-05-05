@@ -3,8 +3,31 @@
     "sobreNos": "About Us",
     "geal": "GEAL",
     "visitar": "Visit",
+    "investigacao": "Scientific Research",
     "lojaOnline": "Online Shop",
     "guardioes": "Guardians"
+  },
+  "NavSub": {
+    "sobreNos": {
+      "historia": "History",
+      "equipa": "Team",
+      "missao": "Mission"
+    },
+    "visitar": {
+      "horarios": "Hours & tickets",
+      "comoChegar": "How to arrive",
+      "acessibilidade": "Accessibility"
+    },
+    "investigacao": {
+      "projetos": "Projects",
+      "publicacoes": "Publications",
+      "equipa": "Research team"
+    },
+    "guardioes": {
+      "tornarSe": "Become a Guardian",
+      "beneficios": "Benefits",
+      "empresas": "Corporate friends"
+    }
   },
   "Home": {
     "title": "Museu da Lourinhã",

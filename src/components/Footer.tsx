@@ -5,6 +5,7 @@ const NAV_LINKS = [
   { key: "sobreNos", href: "/sobre-nos" },
   { key: "geal", href: "/geal" },
   { key: "visitar", href: "/visitar" },
+  { key: "investigacao", href: "/investigacao-cientifica" },
   { key: "lojaOnline", href: "/loja-online" },
   { key: "guardioes", href: "/guardioes" },
 ] as const;

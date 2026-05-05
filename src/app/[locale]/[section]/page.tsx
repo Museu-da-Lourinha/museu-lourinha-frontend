@@ -7,6 +7,7 @@ const SECTION_TO_NAV_KEY = {
   "sobre-nos": "sobreNos",
   geal: "geal",
   visitar: "visitar",
+  "investigacao-cientifica": "investigacao",
   "loja-online": "lojaOnline",
   guardioes: "guardioes",
 } as const;

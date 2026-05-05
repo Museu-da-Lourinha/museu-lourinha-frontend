@@ -3,8 +3,31 @@
     "sobreNos": "Sobre Nós",
     "geal": "GEAL",
     "visitar": "Visitar",
+    "investigacao": "Investigação Científica",
     "lojaOnline": "Loja Online",
     "guardioes": "Guardiões"
+  },
+  "NavSub": {
+    "sobreNos": {
+      "historia": "História",
+      "equipa": "Equipa",
+      "missao": "Missão"
+    },
+    "visitar": {
+      "horarios": "Horários e bilhetes",
+      "comoChegar": "Como chegar",
+      "acessibilidade": "Acessibilidade"
+    },
+    "investigacao": {
+      "projetos": "Projetos",
+      "publicacoes": "Publicações",
+      "equipa": "Equipa científica"
+    },
+    "guardioes": {
+      "tornarSe": "Tornar-se Guardião",
+      "beneficios": "Benefícios",
+      "empresas": "Empresas amigas"
+    }
   },
   "Home": {
     "title": "Museu da Lourinhã",
