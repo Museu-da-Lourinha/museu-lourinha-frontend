@@ -33,56 +33,22 @@
     "title": "Museu da Lourinhã",
     "welcome": "Where Late Jurassic dinosaurs meet the history and traditions of the Portuguese coast."
   },
-  "Hero": {
+  "HeroCarousel": {
+    "label": "Museum image gallery",
+    "previous": "Previous image",
+    "next": "Next image",
+    "goToSlide": "Go to image {n}",
+    "slidePosition": "{n} of {total}",
+    "slideAlt1": "Palaeontology hall",
+    "slideAlt2": "Archaeology hall",
+    "slideAlt3": "Ethnology hall",
+    "slideAlt4": "Jurassic Garden",
     "eyebrow": "Museu da Lourinhã",
-    "tagline": "Where Jurassic dinosaurs meet the sea.",
-    "lead": "Palaeontology, archaeology, ethnography and a Jurassic garden — one museum, eight centuries of stories waiting for you.",
-    "ctaVisit": "Plan your visit",
-    "ctaExplore": "Explore the collections"
-  },
-  "Highlights": {
-    "heading": "Four collections, one story",
-    "subtitle": "Each wing of the museum reveals a layer of the Lourinhã territory — from the deep Jurassic sea to everyday crafts.",
-    "paleontologia": {
-      "name": "Palaeontology",
-      "description": "Dinosaur skeletons and eggs with 152-million-year-old embryos."
-    },
-    "arqueologia": {
-      "name": "Archaeology",
-      "description": "Roman, medieval and early-modern traces of the Lourinhã region."
-    },
-    "etnografia": {
-      "name": "Ethnography",
-      "description": "Everyday objects, crafts and traditions of the local community."
-    },
-    "jardim": {
-      "name": "Jurassic Garden",
-      "description": "Living plants that have shared the planet with dinosaurs for millions of years."
-    }
-  },
-  "QuickAccess": {
-    "heading": "What you can do today",
-    "visitar": {
-      "title": "Visit the museum",
-      "description": "Opening hours, tickets and how to reach Lourinhã.",
-      "cta": "See details"
-    },
-    "lojaOnline": {
-      "title": "Online shop",
-      "description": "Replicas, books and souvenirs to take a piece of the museum home.",
-      "cta": "Enter the shop"
-    },
-    "guardioes": {
-      "title": "Become a Guardian",
-      "description": "Support the museum's mission and palaeontological research in Lourinhã.",
-      "cta": "Learn how"
-    }
-  },
-  "LatestNews": {
-    "heading": "Latest news",
-    "subtitle": "Discoveries, temporary exhibitions and updates from the museum.",
-    "viewAll": "See all news",
-    "empty": "No news published yet."
+    "tagline": "In the heart of Lourinhã lives a guardian of time: Museu da Lourinhã.",
+    "lead": "More than an exhibition space — it is a place where memory comes alive.",
+    "lead2": "Here, the traces of the past speak to us — from the dinosaurs that walked this land to the traditions that shaped our identity.",
+    "ctaVisit": "Buy ticket",
+    "ctaExplore": "School visits"
   },
   "Error": {
     "title": "Something went wrong",

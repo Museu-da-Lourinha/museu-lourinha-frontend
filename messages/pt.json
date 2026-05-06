@@ -33,56 +33,22 @@
     "title": "Museu da Lourinhã",
     "welcome": "Onde os dinossauros do Jurássico Superior se encontram com a história e a tradição da costa portuguesa."
   },
-  "Hero": {
+  "HeroCarousel": {
+    "label": "Galeria de imagens do museu",
+    "previous": "Imagem anterior",
+    "next": "Imagem seguinte",
+    "goToSlide": "Ir para a imagem {n}",
+    "slidePosition": "{n} de {total}",
+    "slideAlt1": "Sala de Paleontologia",
+    "slideAlt2": "Sala de Arqueologia",
+    "slideAlt3": "Sala de Etnologia",
+    "slideAlt4": "Jardim Jurássico",
     "eyebrow": "Museu da Lourinhã",
-    "tagline": "Onde os dinossauros do Jurássico se encontram com o mar.",
-    "lead": "Paleontologia, arqueologia, etnografia e um jardim jurássico — um só museu, oito séculos de histórias para descobrir.",
-    "ctaVisit": "Planear a sua visita",
-    "ctaExplore": "Explorar coleções"
-  },
-  "Highlights": {
-    "heading": "Quatro coleções, uma história",
-    "subtitle": "Cada secção do museu revela uma camada do território da Lourinhã — do mar profundo do Jurássico aos ofícios do quotidiano.",
-    "paleontologia": {
-      "name": "Paleontologia",
-      "description": "Esqueletos de dinossauros e ovos com embriões com 152 milhões de anos."
-    },
-    "arqueologia": {
-      "name": "Arqueologia",
-      "description": "Vestígios romanos, medievais e modernos do território da Lourinhã."
-    },
-    "etnografia": {
-      "name": "Etnografia",
-      "description": "Objetos do dia-a-dia, ofícios e tradições da comunidade local."
-    },
-    "jardim": {
-      "name": "Jardim Jurássico",
-      "description": "Plantas vivas que partilham o planeta com os dinossauros há milhões de anos."
-    }
-  },
-  "QuickAccess": {
-    "heading": "O que pode fazer hoje",
-    "visitar": {
-      "title": "Visitar o museu",
-      "description": "Horários, bilhetes e como chegar à Lourinhã.",
-      "cta": "Ver detalhes"
-    },
-    "lojaOnline": {
-      "title": "Loja online",
-      "description": "Réplicas, livros e recordações para levar uma parte do museu consigo.",
-      "cta": "Entrar na loja"
-    },
-    "guardioes": {
-      "title": "Tornar-se Guardião",
-      "description": "Apoie a missão do museu e a investigação paleontológica na Lourinhã.",
-      "cta": "Saber como"
-    }
-  },
-  "LatestNews": {
-    "heading": "Últimas notícias",
-    "subtitle": "Descobertas, exposições temporárias e novidades do museu.",
-    "viewAll": "Ver todas as notícias",
-    "empty": "Ainda sem notícias publicadas."
+    "tagline": "No coração da Lourinhã, vive um guardião do tempo: o Museu da Lourinhã.",
+    "lead": "Mais que um espaço de exposição, é um lugar onde a memória ganha vida.",
+    "lead2": "Aqui, os vestígios do passado falam connosco, desde os dinossauros que caminharam nesta terra até às tradições que moldaram a nossa identidade.",
+    "ctaVisit": "Comprar bilhete",
+    "ctaExplore": "Visitas escolares"
   },
   "Error": {
     "title": "Algo correu mal",

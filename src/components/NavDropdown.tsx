@@ -81,53 +81,73 @@ export function NavDropdown({
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls={menuId}
-        className={`group relative inline-flex items-center gap-1 ${triggerClassName}`}
+        className={`group inline-flex items-center gap-2 ${triggerClassName}`}
       >
-        <span>{label}</span>
-        <svg
-          aria-hidden="true"
-          viewBox="0 0 12 12"
-          className={`h-3 w-3 transition-transform duration-200 ${
-            open ? "rotate-180" : ""
-          }`}
-        >
-          <path
-            d="M2.5 4.5 6 8l3.5-3.5"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            fill="none"
+        <span className="relative inline-block">
+          {label}
+          <span
+            aria-hidden="true"
+            className={`pointer-events-none absolute inset-x-0 -bottom-0.5 h-[2px] origin-left transition-transform duration-300 ease-out ${
+              showUnderline ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+            } ${underlineClassName}`}
           />
-        </svg>
+        </span>
         <span
           aria-hidden="true"
-          className={`pointer-events-none absolute inset-x-0 -bottom-0.5 h-[2px] origin-left transition-transform duration-300 ease-out ${
-            showUnderline ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-          } ${underlineClassName}`}
-        />
+          className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white text-black transition-transform duration-200 ${
+            open ? "rotate-90" : ""
+          }`}
+        >
+          <svg viewBox="0 0 24 24" fill="none" className="h-2.5 w-2.5">
+            <path
+              d="M9 6l6 6-6 6"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </span>
       </button>
 
-      {open && (
-        <div
-          id={menuId}
-          role="menu"
-          aria-label={label}
-          className={`absolute left-0 top-full mt-3 min-w-[14rem] rounded-lg py-2 shadow-lg ring-1 ${panelClassName}`}
-        >
-          {items.map((item) => (
-            <Link
-              key={item.key}
-              href={item.href}
-              role="menuitem"
-              onClick={() => setOpen(false)}
-              className={`block px-4 py-2 text-sm transition-colors focus-visible:outline-none ${itemClassName}`}
+      <div
+        id={menuId}
+        role="menu"
+        aria-label={label}
+        aria-hidden={!open}
+        className={`absolute left-0 top-full mt-3 min-w-[18rem] origin-top shadow-lg transition-[opacity,transform] duration-200 ease-out ${panelClassName} ${
+          open
+            ? "pointer-events-auto translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-2 opacity-0"
+        }`}
+      >
+        {items.map((item) => (
+          <Link
+            key={item.key}
+            href={item.href}
+            role="menuitem"
+            tabIndex={open ? 0 : -1}
+            onClick={() => setOpen(false)}
+            className={`flex items-center justify-between gap-6 px-6 py-4 text-base font-semibold transition-colors focus-visible:outline-none ${itemClassName}`}
+          >
+            <span>{item.label}</span>
+            <span
+              aria-hidden="true"
+              className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white text-black"
             >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      )}
+              <svg viewBox="0 0 24 24" fill="none" className="h-2.5 w-2.5">
+                <path
+                  d="M9 6l6 6-6 6"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

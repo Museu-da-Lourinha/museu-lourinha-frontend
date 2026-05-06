@@ -54,10 +54,10 @@ const NAV_TREE: NavItem[] = [
   },
 ];
 
-const TRIGGER_CLASS = "py-1 text-white/90 transition-colors hover:text-white";
+const TRIGGER_CLASS = "py-4 text-white/90 transition-colors hover:text-white";
 const UNDERLINE_CLASS = "bg-verde-lima";
-const PANEL_CLASS = "bg-white text-stone-800 ring-stone-200";
-const ITEM_CLASS = "hover:bg-stone-50 hover:text-primary focus-visible:bg-stone-50 focus-visible:text-primary";
+const PANEL_CLASS = "bg-black/40 text-white backdrop-blur-md backdrop-saturate-150";
+const ITEM_CLASS = "border-b border-white/15 last:border-0 hover:bg-white/10 focus-visible:bg-white/10";
 
 export function Navbar({ locale }: { locale: string }) {
   const t = useTranslations("Nav");
@@ -75,9 +75,9 @@ export function Navbar({ locale }: { locale: string }) {
   return (
     <nav
       aria-label="Main navigation"
-      className="fixed left-0 right-0 top-0 z-50 overflow-visible bg-primary/60 backdrop-blur-sm"
+      className="fixed left-0 right-0 top-0 z-50 overflow-visible bg-transparent backdrop-blur-md backdrop-saturate-150"
     >
-      <div className="relative mx-auto flex max-w-7xl items-center justify-end px-6 py-6 pl-40 sm:pl-44">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-end px-6 py-2 pl-40 sm:pl-44">
         <Link href="/" className="absolute left-6 bottom-0 translate-y-1/2">
           <Image
             src="/assets/images/logo-white.svg"
