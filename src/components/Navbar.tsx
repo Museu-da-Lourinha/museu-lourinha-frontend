@@ -15,9 +15,10 @@ type NavItem = {
 
 const NAV_TREE: NavItem[] = [
   {
-    key: "sobreNos",
+    key: "museu",
     href: "/sobre-nos",
     childKeys: [
+      { key: "sobreNos", subKey: "sobreNos", href: "/sobre-nos" },
       { key: "historia", subKey: "historia", href: "/sobre-nos#historia" },
       { key: "equipa", subKey: "equipa", href: "/sobre-nos#equipa" },
       { key: "missao", subKey: "missao", href: "/sobre-nos#missao" },

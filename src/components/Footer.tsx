@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 const NAV_LINKS = [
-  { key: "sobreNos", href: "/sobre-nos" },
+  { key: "museu", href: "/sobre-nos" },
   { key: "geal", href: "/geal" },
   { key: "visitar", href: "/visitar" },
   { key: "investigacao", href: "/investigacao-cientifica" },

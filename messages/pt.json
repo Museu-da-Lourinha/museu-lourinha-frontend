@@ -1,6 +1,6 @@
 {
   "Nav": {
-    "sobreNos": "Sobre Nós",
+    "museu": "Museu",
     "geal": "GEAL",
     "visitar": "Visitar",
     "investigacao": "Investigação Científica",
@@ -8,7 +8,8 @@
     "guardioes": "Guardiões"
   },
   "NavSub": {
-    "sobreNos": {
+    "museu": {
+      "sobreNos": "Sobre Nós",
       "historia": "História",
       "equipa": "Equipa",
       "missao": "Missão"
