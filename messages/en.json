@@ -1,17 +1,203 @@
 {
   "Nav": {
     "museu": "Museum",
-    "visitar": "Visit",
     "geal": "GEAL",
-    "educacao": "Education",
-    "investigacao": "Research",
-    "loja": "Shop"
+    "visitar": "Visit",
+    "investigacao": "Scientific Research",
+    "lojaOnline": "Online Shop",
+    "guardioes": "Guardians"
+  },
+  "NavSub": {
+    "museu": {
+      "sobreNos": "About Us",
+      "missao": "Mission",
+      "exposicoes": "Exhibitions",
+      "equipa": "Team"
+    },
+    "geal": {
+      "historiaFundadores": "History / Founders",
+      "areasAtuacao": "Areas of Activity",
+      "estatutos": "Statutes",
+      "orgaosSociais": "Governing Bodies",
+      "mesaAssembleia": "General Assembly Board",
+      "direccao": "Board of Directors",
+      "conselhoFiscal": "Audit Committee",
+      "conselhoCientifico": "Scientific Council",
+      "colaboracoes": "Collaborations"
+    },
+    "visitar": {
+      "planearVisita": "Plan Your Visit",
+      "bilheteira": "Tickets",
+      "visitasEscolares": "School Visits",
+      "ondeEstamos": "Where We Are",
+      "mapaMuseu": "Museum Map",
+      "acessibilidade": "Accessibility",
+      "horario": "Hours"
+    },
+    "investigacao": {
+      "investigacao": "Research",
+      "equipaInvestigacao": "Research Team",
+      "projectosInvestigacao": "Research Projects",
+      "artigosCientificos": "Scientific Articles",
+      "laboratorio": "Laboratory",
+      "coleccoes": "Collections"
+    },
+    "guardioes": {
+      "comoApoiar": "How to Support",
+      "apoioCorporativo": "Corporate Support",
+      "doar": "Donate",
+      "serVoluntario": "Volunteer"
+    }
+  },
+  "Search": {
+    "label": "Search",
+    "placeholder": "Search the museum…",
+    "openLabel": "Open search",
+    "closeLabel": "Close search",
+    "submitLabel": "Search",
+    "viewAll": "View all results",
+    "noResults": "No results for \"{query}\"",
+    "emptyState": "Start typing to search the museum.",
+    "resultsFor": "Results for \"{query}\"",
+    "resultsCount": "{count, plural, =0 {No results} =1 {1 result} other {# results}}",
+    "filterAll": "All",
+    "filterNews": "News",
+    "filterExhibition": "Exhibitions",
+    "filterProject": "Projects",
+    "filterPublication": "Publications",
+    "filterTeam": "Team",
+    "filterStatic": "Pages",
+    "loading": "Searching…",
+    "notConfigured": "Search is not configured yet."
+  },
+  "Pages": {
+    "museu": {
+      "title": "Museum",
+      "eyebrow": "Meet us",
+      "lead": "A guardian of time in the heart of Lourinhã.",
+      "sections": {
+        "sobre-nos": "About Us",
+        "missao": "Mission",
+        "exposicoes": "Exhibitions",
+        "exposicoesLead": "Discover our Palaeontology, Archaeology, Ethnography collections and the Jurassic Garden.",
+        "exposicoesCta": "View exhibitions",
+        "equipa": "Team",
+        "contacte-nos": "Contact us"
+      }
+    },
+    "exposicoes": {
+      "title": "Exhibitions",
+      "eyebrow": "On display",
+      "sections": {
+        "introducao": "Introduction"
+      }
+    },
+    "geal": {
+      "title": "GEAL",
+      "eyebrow": "Research group",
+      "sections": {
+        "historia-fundadores": "History / Founders",
+        "areas-de-atuacao": "Areas of Activity",
+        "estatutos": "Statutes",
+        "orgaos-sociais": "Governing Bodies",
+        "mesa-assembleia-geral": "General Assembly Board",
+        "direccao": "Board of Directors",
+        "conselho-fiscal": "Audit Committee",
+        "conselho-cientifico": "Scientific Council",
+        "colaboracoes": "Collaborations"
+      }
+    },
+    "visitar": {
+      "title": "Visit",
+      "eyebrow": "Plan your visit",
+      "sections": {
+        "planear-visita": "Plan Your Visit",
+        "bilheteira": "Tickets",
+        "bilheteiraLead": "Buy your ticket online or check our rates.",
+        "bilheteiraCta": "Go to Tickets",
+        "visitas-escolares": "School Visits",
+        "onde-estamos": "Where We Are",
+        "mapa-do-museu": "Museum Map",
+        "acessibilidade": "Accessibility",
+        "horario": "Hours"
+      }
+    },
+    "bilheteira": {
+      "title": "Tickets",
+      "eyebrow": "Tickets and rates",
+      "sections": {
+        "introducao": "Introduction"
+      }
+    },
+    "investigacao": {
+      "title": "Scientific Research",
+      "eyebrow": "Science at the museum",
+      "sections": {
+        "investigacao": "Research",
+        "equipa-de-investigacao": "Research Team",
+        "projectos-de-investigacao": "Research Projects",
+        "artigos-cientificos": "Scientific Articles",
+        "laboratorio": "Laboratory",
+        "coleccoes": "Collections",
+        "coleccoesLead": "Palaeontology · Archaeology · Ethnography · ZBY · CIID"
+      }
+    },
+    "lojaOnline": {
+      "title": "Online Shop",
+      "eyebrow": "Take home a piece of the museum",
+      "sections": {
+        "introducao": "Introduction"
+      }
+    },
+    "guardioes": {
+      "title": "Guardians",
+      "eyebrow": "Support our mission",
+      "sections": {
+        "como-apoiar": "How to Support",
+        "apoio-corporativo": "Corporate Support",
+        "doar": "Donate",
+        "ser-voluntario": "Volunteer"
+      }
+    }
   },
   "Home": {
     "title": "Museu da Lourinhã",
-    "welcome": "Welcome to the museum website. Connected to Strapi CMS.",
-    "news": "News",
-    "noNews": "No news yet.",
-    "setupHint": "Start Strapi, access the admin, create the first user and add news in the Content Manager."
+    "welcome": "Where Late Jurassic dinosaurs meet the history and traditions of the Portuguese coast."
+  },
+  "HeroCarousel": {
+    "label": "Museum image gallery",
+    "previous": "Previous image",
+    "next": "Next image",
+    "goToSlide": "Go to image {n}",
+    "slidePosition": "{n} of {total}",
+    "slideAlt1": "Palaeontology hall",
+    "slideAlt2": "Archaeology hall",
+    "slideAlt3": "Ethnology hall",
+    "slideAlt4": "Jurassic Garden",
+    "eyebrow": "Museu da Lourinhã",
+    "tagline": "In the heart of Lourinhã lives a guardian of time: Museu da Lourinhã.",
+    "lead": "More than an exhibition space — it is a place where memory comes alive.",
+    "lead2": "Here, the traces of the past speak to us — from the dinosaurs that walked this land to the traditions that shaped our identity.",
+    "ctaVisit": "Buy ticket",
+    "ctaExplore": "School visits"
+  },
+  "Error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again.",
+    "retry": "Try again"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "home": "Back to home"
+  },
+  "Footer": {
+    "address": "Rua João Luís de Moura, 2530-158 Lourinhã",
+    "explore": "Explore",
+    "navLabel": "Footer navigation",
+    "schedule": "Opening hours",
+    "hours": "Tue - Sun: 10:00 AM - 6:00 PM",
+    "closedDay": "Closed on Mondays",
+    "rights": "All rights reserved."
   }
 }

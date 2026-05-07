@@ -1,17 +1,203 @@
 {
   "Nav": {
     "museu": "Museu",
-    "visitar": "Visitar",
     "geal": "GEAL",
-    "educacao": "Educação",
-    "investigacao": "Investigação",
-    "loja": "Loja"
+    "visitar": "Visitar",
+    "investigacao": "Investigação Científica",
+    "lojaOnline": "Loja Online",
+    "guardioes": "Guardiões"
+  },
+  "NavSub": {
+    "museu": {
+      "sobreNos": "Sobre Nós",
+      "missao": "Missão",
+      "exposicoes": "Exposições",
+      "equipa": "Equipa"
+    },
+    "geal": {
+      "historiaFundadores": "História / Fundadores",
+      "areasAtuacao": "Áreas de Atuação",
+      "estatutos": "Estatutos",
+      "orgaosSociais": "Orgãos Sociais",
+      "mesaAssembleia": "Mesa Assembleia Geral",
+      "direccao": "Direcção",
+      "conselhoFiscal": "Conselho Fiscal",
+      "conselhoCientifico": "Conselho Científico",
+      "colaboracoes": "Colaborações"
+    },
+    "visitar": {
+      "planearVisita": "Planear Visita",
+      "bilheteira": "Bilheteira",
+      "visitasEscolares": "Visitas Escolares",
+      "ondeEstamos": "Onde Estamos",
+      "mapaMuseu": "Mapa do Museu",
+      "acessibilidade": "Acessibilidade",
+      "horario": "Horário"
+    },
+    "investigacao": {
+      "investigacao": "Investigação",
+      "equipaInvestigacao": "Equipa de Investigação",
+      "projectosInvestigacao": "Projectos de Investigação",
+      "artigosCientificos": "Artigos Científicos",
+      "laboratorio": "Laboratório",
+      "coleccoes": "Colecções"
+    },
+    "guardioes": {
+      "comoApoiar": "Como apoiar",
+      "apoioCorporativo": "Apoio corporativo",
+      "doar": "Doar",
+      "serVoluntario": "Ser voluntário"
+    }
+  },
+  "Search": {
+    "label": "Pesquisar",
+    "placeholder": "Pesquisar no museu…",
+    "openLabel": "Abrir pesquisa",
+    "closeLabel": "Fechar pesquisa",
+    "submitLabel": "Pesquisar",
+    "viewAll": "Ver todos os resultados",
+    "noResults": "Sem resultados para \"{query}\"",
+    "emptyState": "Comece a escrever para pesquisar no museu.",
+    "resultsFor": "Resultados para \"{query}\"",
+    "resultsCount": "{count, plural, =0 {Sem resultados} =1 {1 resultado} other {# resultados}}",
+    "filterAll": "Tudo",
+    "filterNews": "Notícias",
+    "filterExhibition": "Exposições",
+    "filterProject": "Projetos",
+    "filterPublication": "Publicações",
+    "filterTeam": "Equipa",
+    "filterStatic": "Páginas",
+    "loading": "A pesquisar…",
+    "notConfigured": "A pesquisa ainda não está configurada."
+  },
+  "Pages": {
+    "museu": {
+      "title": "Museu",
+      "eyebrow": "Conheça-nos",
+      "lead": "Um guardião do tempo no coração da Lourinhã.",
+      "sections": {
+        "sobre-nos": "Sobre Nós",
+        "missao": "Missão",
+        "exposicoes": "Exposições",
+        "exposicoesLead": "Descubra as nossas coleções de Paleontologia, Arqueologia, Etnografia e o Jardim Jurássico.",
+        "exposicoesCta": "Ver exposições",
+        "equipa": "Equipa",
+        "contacte-nos": "Contacte-nos"
+      }
+    },
+    "exposicoes": {
+      "title": "Exposições",
+      "eyebrow": "Em exibição",
+      "sections": {
+        "introducao": "Introdução"
+      }
+    },
+    "geal": {
+      "title": "GEAL",
+      "eyebrow": "Grupo de Estudos",
+      "sections": {
+        "historia-fundadores": "História / Fundadores",
+        "areas-de-atuacao": "Áreas de Atuação",
+        "estatutos": "Estatutos",
+        "orgaos-sociais": "Orgãos Sociais",
+        "mesa-assembleia-geral": "Mesa Assembleia Geral",
+        "direccao": "Direcção",
+        "conselho-fiscal": "Conselho Fiscal",
+        "conselho-cientifico": "Conselho Científico",
+        "colaboracoes": "Colaborações"
+      }
+    },
+    "visitar": {
+      "title": "Visitar",
+      "eyebrow": "Planeie a sua visita",
+      "sections": {
+        "planear-visita": "Planear Visita",
+        "bilheteira": "Bilheteira",
+        "bilheteiraLead": "Compre o seu bilhete online ou conheça as nossas tarifas.",
+        "bilheteiraCta": "Ir para a Bilheteira",
+        "visitas-escolares": "Visitas Escolares",
+        "onde-estamos": "Onde Estamos",
+        "mapa-do-museu": "Mapa do Museu",
+        "acessibilidade": "Acessibilidade",
+        "horario": "Horário"
+      }
+    },
+    "bilheteira": {
+      "title": "Bilheteira",
+      "eyebrow": "Bilhetes e tarifas",
+      "sections": {
+        "introducao": "Introdução"
+      }
+    },
+    "investigacao": {
+      "title": "Investigação Científica",
+      "eyebrow": "Ciência no museu",
+      "sections": {
+        "investigacao": "Investigação",
+        "equipa-de-investigacao": "Equipa de Investigação",
+        "projectos-de-investigacao": "Projectos de Investigação",
+        "artigos-cientificos": "Artigos Científicos",
+        "laboratorio": "Laboratório",
+        "coleccoes": "Colecções",
+        "coleccoesLead": "Paleontologia · Arqueologia · Etnografia · ZBY · CIID"
+      }
+    },
+    "lojaOnline": {
+      "title": "Loja Online",
+      "eyebrow": "Leve um pedacinho do museu",
+      "sections": {
+        "introducao": "Introdução"
+      }
+    },
+    "guardioes": {
+      "title": "Guardiões",
+      "eyebrow": "Apoie a missão",
+      "sections": {
+        "como-apoiar": "Como apoiar",
+        "apoio-corporativo": "Apoio corporativo",
+        "doar": "Doar",
+        "ser-voluntario": "Ser voluntário"
+      }
+    }
   },
   "Home": {
     "title": "Museu da Lourinhã",
-    "welcome": "Bem-vindo ao site do museu. Conectado ao Strapi CMS.",
-    "news": "Notícias",
-    "noNews": "Nenhuma notícia ainda.",
-    "setupHint": "Inicie o Strapi, acesse o admin, crie o primeiro usuário e adicione notícias no Content Manager."
+    "welcome": "Onde os dinossauros do Jurássico Superior se encontram com a história e a tradição da costa portuguesa."
+  },
+  "HeroCarousel": {
+    "label": "Galeria de imagens do museu",
+    "previous": "Imagem anterior",
+    "next": "Imagem seguinte",
+    "goToSlide": "Ir para a imagem {n}",
+    "slidePosition": "{n} de {total}",
+    "slideAlt1": "Sala de Paleontologia",
+    "slideAlt2": "Sala de Arqueologia",
+    "slideAlt3": "Sala de Etnologia",
+    "slideAlt4": "Jardim Jurássico",
+    "eyebrow": "Museu da Lourinhã",
+    "tagline": "No coração da Lourinhã, vive um guardião do tempo: o Museu da Lourinhã.",
+    "lead": "Mais que um espaço de exposição, é um lugar onde a memória ganha vida.",
+    "lead2": "Aqui, os vestígios do passado falam connosco, desde os dinossauros que caminharam nesta terra até às tradições que moldaram a nossa identidade.",
+    "ctaVisit": "Comprar bilhete",
+    "ctaExplore": "Visitas escolares"
+  },
+  "Error": {
+    "title": "Algo correu mal",
+    "description": "Ocorreu um erro inesperado. Por favor, tente novamente.",
+    "retry": "Tentar novamente"
+  },
+  "NotFound": {
+    "title": "Página não encontrada",
+    "description": "A página que procura não existe ou foi movida.",
+    "home": "Voltar ao início"
+  },
+  "Footer": {
+    "address": "Rua João Luís de Moura, 2530-158 Lourinhã",
+    "explore": "Explorar",
+    "navLabel": "Navegação do rodapé",
+    "schedule": "Horário",
+    "hours": "Ter - Dom: 10h00 - 18h00",
+    "closedDay": "Encerrado à segunda-feira",
+    "rights": "Todos os direitos reservados."
   }
 }
