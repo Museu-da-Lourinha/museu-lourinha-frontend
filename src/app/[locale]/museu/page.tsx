@@ -53,7 +53,6 @@ export default async function MuseuPage({ params }: Props) {
         <ExhibitionsCarousel className="relative left-1/2 right-1/2 -mx-[50vw] mt-8 w-screen rounded-none border-0 shadow-none" />
       </Section>
       <Section id="equipa" title={t("sections.equipa")} />
-      <Section id="contacte-nos" title={t("sections.contacte-nos")} />
     </PageShell>
   );
 }

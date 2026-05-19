@@ -5,20 +5,24 @@ import Image from "next/image";
 
 const SLIDES = [
   {
-    src: "/assets/exposicoes/slide-a.png",
-    alt: "Exposicao do Museu da Lourinha - imagem 1",
+    src: "/assets/exposicoes/slide-3-arqueologia.png",
+    alt: "Exposição de Arqueologia do Museu da Lourinhã",
+    title: "Arqueologia",
   },
   {
-    src: "/assets/exposicoes/slide-b.png",
-    alt: "Exposicao do Museu da Lourinha - imagem 2",
+    src: "/assets/exposicoes/slide-1-etnografia.png",
+    alt: "Exposição de Etnografia do Museu da Lourinhã",
+    title: "Etnografia",
   },
   {
-    src: "/assets/exposicoes/slide-d.png",
-    alt: "Exposicao do Museu da Lourinha - imagem 4",
+    src: "/assets/exposicoes/slide-2-paleontologia.png",
+    alt: "Exposição de Paleontologia do Museu da Lourinhã",
+    title: "Paleontologia",
   },
   {
-    src: "/assets/exposicoes/slide-c.png",
-    alt: "Exposicao do Museu da Lourinha - imagem 3",
+    src: "/assets/exposicoes/slide-4-jardim.jpg",
+    alt: "Jardim Jurássico do Museu da Lourinhã",
+    title: "Jardim Jurássico",
   },
 ] as const;
 
@@ -31,6 +35,7 @@ type ExhibitionsCarouselProps = {
 export function ExhibitionsCarousel({ className = "" }: ExhibitionsCarouselProps) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const currentSlide = SLIDES[index];
 
   useEffect(() => {
     if (paused) return;
@@ -98,6 +103,15 @@ export function ExhibitionsCarousel({ className = "" }: ExhibitionsCarouselProps
             ›
           </span>
         </button>
+      </div>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-14 flex justify-center">
+        <div className="relative h-16 w-64">
+          <div className="absolute inset-0 rounded-t-[999px] bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <p className="absolute inset-x-0 bottom-3 text-center font-display text-sm font-semibold text-white sm:text-base">
+            {currentSlide.title}
+          </p>
+        </div>
       </div>
 
       <div className="absolute inset-x-0 bottom-4 flex justify-center">

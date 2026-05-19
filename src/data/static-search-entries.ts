@@ -118,7 +118,7 @@ const STATIC_ENTRIES: StaticEntrySeed[] = [
   },
   {
     slug: "contacte-nos",
-    url: "/museu#contacte-nos",
+    url: "/museu",
     pt: {
       title: "Contacte-nos",
       excerpt: "Como entrar em contacto com o Museu da Lourinhã.",

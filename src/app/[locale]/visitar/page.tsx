@@ -40,7 +40,7 @@ export default async function VisitarPage({ params }: Props) {
       <Section id="onde-estamos" title={t("sections.onde-estamos")}>
         <p>{t("sections.ondeEstamosLead")}</p>
         <p className="mt-3 font-semibold">{t("sections.ondeEstamosAddress")}</p>
-        <div className="mt-6 overflow-hidden rounded-xl border border-stone-200 dark:border-stone-700">
+        <div className="mt-6 overflow-hidden rounded-none border border-stone-200 dark:border-stone-700">
           <iframe
             title={t("sections.ondeEstamosMapTitle")}
             src="https://maps.google.com/maps?q=Museu%20da%20Lourinh%C3%A3&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -61,7 +61,7 @@ export default async function VisitarPage({ params }: Props) {
             <p>{t("sections.mapaMuseuLead")}</p>
             <p>{t("sections.mapaMuseuDescription")}</p>
           </div>
-          <div className="overflow-hidden rounded-xl border border-stone-200 bg-white shadow-sm dark:border-stone-700 dark:bg-stone-900 lg:col-span-7">
+          <div className="overflow-hidden rounded-none border border-stone-200 bg-white shadow-sm dark:border-stone-700 dark:bg-stone-900 lg:col-span-7">
             <Image
               src="/assets/visitar/mapa-museu-lourinha.png"
               alt={t("sections.mapaMuseuImageAlt")}
@@ -95,7 +95,7 @@ export default async function VisitarPage({ params }: Props) {
       <Section id="horario" title={t("sections.horario")}>
         <p>{t("sections.horarioLead")}</p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm dark:border-stone-700 dark:bg-stone-900">
+          <div className="rounded-none border border-stone-200 bg-white p-5 shadow-sm dark:border-stone-700 dark:bg-stone-900">
             <h3 className="font-display text-xl font-bold text-stone-900 dark:text-stone-100">
               {t("sections.horarioSetJunTitle")}
             </h3>
@@ -103,7 +103,7 @@ export default async function VisitarPage({ params }: Props) {
             <p>{t("sections.horarioSetJunMorning")}</p>
             <p>{t("sections.horarioSetJunAfternoon")}</p>
           </div>
-          <div className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm dark:border-stone-700 dark:bg-stone-900">
+          <div className="rounded-none border border-stone-200 bg-white p-5 shadow-sm dark:border-stone-700 dark:bg-stone-900">
             <h3 className="font-display text-xl font-bold text-stone-900 dark:text-stone-100">
               {t("sections.horarioJulAgoTitle")}
             </h3>
@@ -114,16 +114,6 @@ export default async function VisitarPage({ params }: Props) {
         </div>
         <p className="mt-5 text-sm">{t("sections.horarioNotaEntrada")}</p>
         <p className="mt-1 text-sm">{t("sections.horarioNotaFecho")}</p>
-        <div className="mt-6 overflow-hidden rounded-xl border border-stone-200 bg-white shadow-sm dark:border-stone-700 dark:bg-stone-900">
-          <Image
-            src="/assets/visitar/horario-museu-lourinha.png"
-            alt={t("sections.horarioImageAlt")}
-            width={1200}
-            height={775}
-            className="h-auto w-full"
-            sizes="(min-width: 1280px) 1024px, 100vw"
-          />
-        </div>
       </Section>
     </PageShell>
   );
