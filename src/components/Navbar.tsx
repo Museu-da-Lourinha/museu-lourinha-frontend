@@ -34,11 +34,6 @@ const NAV_TREE: NavItem[] = [
       { key: "areasAtuacao", subKey: "areasAtuacao", href: "/geal#areas-de-atuacao" },
       { key: "estatutos", subKey: "estatutos", href: "/geal#estatutos" },
       { key: "orgaosSociais", subKey: "orgaosSociais", href: "/geal#orgaos-sociais" },
-      { key: "mesaAssembleia", subKey: "mesaAssembleia", href: "/geal#mesa-assembleia-geral" },
-      { key: "direccao", subKey: "direccao", href: "/geal#direccao" },
-      { key: "conselhoFiscal", subKey: "conselhoFiscal", href: "/geal#conselho-fiscal" },
-      { key: "conselhoCientifico", subKey: "conselhoCientifico", href: "/geal#conselho-cientifico" },
-      { key: "colaboracoes", subKey: "colaboracoes", href: "/geal#colaboracoes" },
     ],
   },
   {

@@ -16,6 +16,7 @@ type NavDropdownProps = {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
   triggerHref?: string;
+  showChevron?: boolean;
   triggerClassName?: string;
   underlineClassName?: string;
   panelClassName?: string;
@@ -31,6 +32,7 @@ export function NavDropdown({
   open: controlledOpen,
   onOpenChange,
   triggerHref,
+  showChevron = true,
   triggerClassName = "",
   underlineClassName = "",
   panelClassName = "",
@@ -147,18 +149,20 @@ export function NavDropdown({
           <Link href={triggerHref} className="inline-block">
             {labelContent}
           </Link>
-          <button
-            type="button"
-            ref={triggerRef}
-            onClick={() => setOpen(!open)}
-            aria-haspopup="menu"
-            aria-expanded={open}
-            aria-controls={menuId}
-            aria-label={`${label} – abrir menu`}
-            className="inline-flex"
-          >
-            {chevron}
-          </button>
+          {showChevron ? (
+            <button
+              type="button"
+              ref={triggerRef}
+              onClick={() => setOpen(!open)}
+              aria-haspopup="menu"
+              aria-expanded={open}
+              aria-controls={menuId}
+              aria-label={`${label} – abrir menu`}
+              className="inline-flex"
+            >
+              {chevron}
+            </button>
+          ) : null}
         </div>
       ) : (
         <button

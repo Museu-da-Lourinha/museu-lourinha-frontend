@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Section";
+import { ExhibitionsCarousel } from "@/components/ExhibitionsCarousel";
+import { Link } from "@/i18n/navigation";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -36,9 +38,19 @@ export default async function MuseuPage({ params }: Props) {
       <Section
         id="exposicoes"
         title={t("sections.exposicoes")}
-        cta={{ label: t("sections.exposicoesCta"), href: "/exposicoes" }}
+        contentClassName="max-w-none"
       >
-        <p>{t("sections.exposicoesLead")}</p>
+        <div className="mt-4 flex items-start justify-between gap-6">
+          <p className="max-w-3xl">{t("sections.exposicoesLead")}</p>
+          <Link
+            href="/exposicoes"
+            className="-translate-y-7 inline-flex shrink-0 items-center gap-2 bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark sm:text-base"
+          >
+            {t("sections.exposicoesCta")}
+            <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+        <ExhibitionsCarousel className="relative left-1/2 right-1/2 -mx-[50vw] mt-8 w-screen rounded-none border-0 shadow-none" />
       </Section>
       <Section id="equipa" title={t("sections.equipa")} />
       <Section id="contacte-nos" title={t("sections.contacte-nos")} />
