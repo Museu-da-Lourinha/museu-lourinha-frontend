@@ -172,9 +172,14 @@ function EducacaoSection() {
           <h2 className="font-display text-5xl font-bold text-white sm:text-6xl lg:text-7xl">
             Educação
           </h2>
+          <p className="mt-8 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg">
+            Mais do que uma visita expositiva, as atividades do Programa Escolar
+            promovem uma aprendizagem ativa e interativa, estimulando a
+            curiosidade e o pensamento crítico dos alunos.
+          </p>
           <Link
             href="/visitar"
-            className="mt-8 inline-flex items-center justify-center bg-white px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-verde-lima hover:text-primary-dark sm:text-base"
+            className="mt-8 inline-flex items-center justify-center bg-white px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-verde-lima hover:text-primary-dark sm:text-base lg:mt-48 lg:ml-0"
           >
             Programas escolares
           </Link>

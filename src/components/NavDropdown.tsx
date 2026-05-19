@@ -15,11 +15,15 @@ type NavDropdownProps = {
   active?: boolean;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
+  triggerHref?: string;
+  showChevron?: boolean;
   triggerClassName?: string;
   underlineClassName?: string;
   panelClassName?: string;
   itemClassName?: string;
 };
+
+const HOVER_CLOSE_DELAY_MS = 120;
 
 export function NavDropdown({
   label,
@@ -27,6 +31,8 @@ export function NavDropdown({
   active = false,
   open: controlledOpen,
   onOpenChange,
+  triggerHref,
+  showChevron = true,
   triggerClassName = "",
   underlineClassName = "",
   panelClassName = "",
@@ -43,7 +49,35 @@ export function NavDropdown({
 
   const rootRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
+  const closeTimerRef = useRef<number | null>(null);
   const menuId = useId();
+
+  const cancelClose = () => {
+    if (closeTimerRef.current !== null) {
+      window.clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  };
+
+  const scheduleClose = () => {
+    cancelClose();
+    closeTimerRef.current = window.setTimeout(() => {
+      setOpen(false);
+    }, HOVER_CLOSE_DELAY_MS);
+  };
+
+  const onMouseEnter = () => {
+    cancelClose();
+    setOpen(true);
+  };
+
+  const onMouseLeave = () => {
+    scheduleClose();
+  };
+
+  useEffect(() => {
+    return () => cancelClose();
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -72,43 +106,78 @@ export function NavDropdown({
 
   const showUnderline = active || open;
 
+  const labelContent = (
+    <span className="group relative inline-block">
+      {label}
+      <span
+        aria-hidden="true"
+        className={`pointer-events-none absolute inset-x-0 -bottom-0.5 h-[2px] origin-left transition-transform duration-300 ease-out ${
+          showUnderline ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+        } ${underlineClassName}`}
+      />
+    </span>
+  );
+
+  const chevron = (
+    <span
+      aria-hidden="true"
+      className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white text-black transition-transform duration-200 ${
+        open ? "rotate-90" : ""
+      }`}
+    >
+      <svg viewBox="0 0 24 24" fill="none" className="h-2.5 w-2.5">
+        <path
+          d="M9 6l6 6-6 6"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
+  );
+
   return (
-    <div ref={rootRef} className="relative">
-      <button
-        type="button"
-        ref={triggerRef}
-        onClick={() => setOpen(!open)}
-        aria-haspopup="menu"
-        aria-expanded={open}
-        aria-controls={menuId}
-        className={`group inline-flex items-center gap-2 ${triggerClassName}`}
-      >
-        <span className="relative inline-block">
-          {label}
-          <span
-            aria-hidden="true"
-            className={`pointer-events-none absolute inset-x-0 -bottom-0.5 h-[2px] origin-left transition-transform duration-300 ease-out ${
-              showUnderline ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-            } ${underlineClassName}`}
-          />
-        </span>
-        <span
-          aria-hidden="true"
-          className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white text-black transition-transform duration-200 ${
-            open ? "rotate-90" : ""
-          }`}
+    <div
+      ref={rootRef}
+      className="relative"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      {triggerHref ? (
+        <div className={`inline-flex items-center gap-2 ${triggerClassName}`}>
+          <Link href={triggerHref} className="inline-block">
+            {labelContent}
+          </Link>
+          {showChevron ? (
+            <button
+              type="button"
+              ref={triggerRef}
+              onClick={() => setOpen(!open)}
+              aria-haspopup="menu"
+              aria-expanded={open}
+              aria-controls={menuId}
+              aria-label={`${label} – abrir menu`}
+              className="inline-flex"
+            >
+              {chevron}
+            </button>
+          ) : null}
+        </div>
+      ) : (
+        <button
+          type="button"
+          ref={triggerRef}
+          onClick={() => setOpen(!open)}
+          aria-haspopup="menu"
+          aria-expanded={open}
+          aria-controls={menuId}
+          className={`inline-flex items-center gap-2 ${triggerClassName}`}
         >
-          <svg viewBox="0 0 24 24" fill="none" className="h-2.5 w-2.5">
-            <path
-              d="M9 6l6 6-6 6"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </span>
-      </button>
+          {labelContent}
+          {chevron}
+        </button>
+      )}
 
       <div
         id={menuId}
@@ -128,23 +197,9 @@ export function NavDropdown({
             role="menuitem"
             tabIndex={open ? 0 : -1}
             onClick={() => setOpen(false)}
-            className={`flex items-center justify-between gap-6 px-6 py-4 text-base font-semibold transition-colors focus-visible:outline-none ${itemClassName}`}
+            className={`block px-6 py-4 text-base font-semibold transition-colors focus-visible:outline-none ${itemClassName}`}
           >
-            <span>{item.label}</span>
-            <span
-              aria-hidden="true"
-              className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white text-black"
-            >
-              <svg viewBox="0 0 24 24" fill="none" className="h-2.5 w-2.5">
-                <path
-                  d="M9 6l6 6-6 6"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
+            {item.label}
           </Link>
         ))}
       </div>

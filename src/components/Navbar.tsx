@@ -5,6 +5,8 @@ import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { Link } from "@/i18n/navigation";
 import { NavDropdown, type NavDropdownItem } from "@/components/NavDropdown";
+import { SearchBar } from "@/components/SearchBar";
+import type { SearchLocale } from "@/types/search";
 
 type NavItem = {
   key: string;
@@ -15,40 +17,57 @@ type NavItem = {
 const NAV_TREE: NavItem[] = [
   {
     key: "museu",
-    href: "/sobre-nos",
+    href: "/museu",
     childKeys: [
-      { key: "sobreNos", subKey: "sobreNos", href: "/sobre-nos" },
-      { key: "historia", subKey: "historia", href: "/sobre-nos#historia" },
-      { key: "equipa", subKey: "equipa", href: "/sobre-nos#equipa" },
-      { key: "missao", subKey: "missao", href: "/sobre-nos#missao" },
+      { key: "sobreNos", subKey: "sobreNos", href: "/museu#sobre-nos" },
+      { key: "missao", subKey: "missao", href: "/museu#missao" },
+      { key: "exposicoes", subKey: "exposicoes", href: "/exposicoes" },
+      { key: "equipa", subKey: "equipa", href: "/museu#equipa" },
     ],
   },
-  { key: "geal", href: "/geal" },
+  {
+    key: "geal",
+    href: "/geal",
+    childKeys: [
+      { key: "historiaFundadores", subKey: "historiaFundadores", href: "/geal#historia-fundadores" },
+      { key: "areasAtuacao", subKey: "areasAtuacao", href: "/geal#areas-de-atuacao" },
+      { key: "estatutos", subKey: "estatutos", href: "/geal#estatutos" },
+      { key: "orgaosSociais", subKey: "orgaosSociais", href: "/geal#orgaos-sociais" },
+    ],
+  },
   {
     key: "visitar",
     href: "/visitar",
     childKeys: [
-      { key: "horarios", subKey: "horarios", href: "/visitar#horarios" },
-      { key: "comoChegar", subKey: "comoChegar", href: "/visitar#como-chegar" },
+      { key: "planearVisita", subKey: "planearVisita", href: "/visitar#planear-visita" },
+      { key: "bilheteira", subKey: "bilheteira", href: "/bilheteira" },
+      { key: "visitasEscolares", subKey: "visitasEscolares", href: "/visitar#visitas-escolares" },
+      { key: "ondeEstamos", subKey: "ondeEstamos", href: "/visitar#onde-estamos" },
+      { key: "mapaMuseu", subKey: "mapaMuseu", href: "/visitar#mapa-do-museu" },
       { key: "acessibilidade", subKey: "acessibilidade", href: "/visitar#acessibilidade" },
+      { key: "horario", subKey: "horario", href: "/visitar#horario" },
     ],
   },
   {
     key: "investigacao",
     href: "/investigacao-cientifica",
     childKeys: [
-      { key: "projetos", subKey: "projetos", href: "/investigacao-cientifica#projetos" },
-      { key: "publicacoes", subKey: "publicacoes", href: "/investigacao-cientifica#publicacoes" },
-      { key: "equipa", subKey: "equipa", href: "/investigacao-cientifica#equipa" },
+      { key: "investigacao", subKey: "investigacao", href: "/investigacao-cientifica#investigacao" },
+      { key: "equipaInvestigacao", subKey: "equipaInvestigacao", href: "/investigacao-cientifica#equipa-de-investigacao" },
+      { key: "projectosInvestigacao", subKey: "projectosInvestigacao", href: "/investigacao-cientifica#projectos-de-investigacao" },
+      { key: "artigosCientificos", subKey: "artigosCientificos", href: "/investigacao-cientifica#artigos-cientificos" },
+      { key: "laboratorio", subKey: "laboratorio", href: "/investigacao-cientifica#laboratorio" },
+      { key: "coleccoes", subKey: "coleccoes", href: "/investigacao-cientifica#coleccoes" },
     ],
   },
   {
     key: "guardioes",
     href: "/guardioes",
     childKeys: [
-      { key: "tornarSe", subKey: "tornarSe", href: "/guardioes#tornar-se" },
-      { key: "beneficios", subKey: "beneficios", href: "/guardioes#beneficios" },
-      { key: "empresas", subKey: "empresas", href: "/guardioes#empresas" },
+      { key: "comoApoiar", subKey: "comoApoiar", href: "/guardioes#como-apoiar" },
+      { key: "apoioCorporativo", subKey: "apoioCorporativo", href: "/guardioes#apoio-corporativo" },
+      { key: "doar", subKey: "doar", href: "/guardioes#doar" },
+      { key: "serVoluntario", subKey: "serVoluntario", href: "/guardioes#ser-voluntario" },
     ],
   },
 ];
@@ -116,6 +135,8 @@ export function Navbar({ locale }: { locale: string }) {
             >
               {t("lojaOnline")}
             </Link>
+
+            <SearchBar locale={locale as SearchLocale} />
 
             <div
               className="relative inline-flex overflow-hidden rounded-none border border-white/45"
@@ -199,6 +220,7 @@ export function Navbar({ locale }: { locale: string }) {
                     active={active}
                     open={openKey === item.key}
                     onOpenChange={(next) => setOpenKey(next ? item.key : null)}
+                    triggerHref={item.href}
                     triggerClassName={TRIGGER_CLASS}
                     underlineClassName={UNDERLINE_CLASS}
                     panelClassName={PANEL_CLASS}

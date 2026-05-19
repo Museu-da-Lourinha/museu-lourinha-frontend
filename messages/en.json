@@ -10,24 +10,174 @@
   "NavSub": {
     "museu": {
       "sobreNos": "About Us",
-      "historia": "History",
-      "equipa": "Team",
-      "missao": "Mission"
+      "missao": "Mission",
+      "exposicoes": "Exhibitions",
+      "equipa": "Team"
+    },
+    "geal": {
+      "historiaFundadores": "History / Founders",
+      "areasAtuacao": "Areas of Activity",
+      "estatutos": "Statutes",
+      "orgaosSociais": "Governing Bodies",
+      "mesaAssembleia": "General Assembly Board",
+      "direccao": "Board of Directors",
+      "conselhoFiscal": "Audit Committee",
+      "conselhoCientifico": "Scientific Council",
+      "colaboracoes": "Collaborations"
     },
     "visitar": {
-      "horarios": "Hours & tickets",
-      "comoChegar": "How to arrive",
-      "acessibilidade": "Accessibility"
+      "planearVisita": "Plan Your Visit",
+      "bilheteira": "Tickets",
+      "visitasEscolares": "School Visits",
+      "ondeEstamos": "Where We Are",
+      "mapaMuseu": "Museum Map",
+      "acessibilidade": "Accessibility",
+      "horario": "Hours"
     },
     "investigacao": {
-      "projetos": "Projects",
-      "publicacoes": "Publications",
-      "equipa": "Research team"
+      "investigacao": "Research",
+      "equipaInvestigacao": "Research Team",
+      "projectosInvestigacao": "Research Projects",
+      "artigosCientificos": "Scientific Articles",
+      "laboratorio": "Laboratory",
+      "coleccoes": "Collections"
     },
     "guardioes": {
-      "tornarSe": "Become a Guardian",
-      "beneficios": "Benefits",
-      "empresas": "Corporate friends"
+      "comoApoiar": "How to Support",
+      "apoioCorporativo": "Corporate Support",
+      "doar": "Donate",
+      "serVoluntario": "Volunteer"
+    }
+  },
+  "Search": {
+    "label": "Search",
+    "placeholder": "Search the museum…",
+    "openLabel": "Open search",
+    "closeLabel": "Close search",
+    "submitLabel": "Search",
+    "viewAll": "View all results",
+    "noResults": "No results for \"{query}\"",
+    "emptyState": "Start typing to search the museum.",
+    "resultsFor": "Results for \"{query}\"",
+    "resultsCount": "{count, plural, =0 {No results} =1 {1 result} other {# results}}",
+    "filterAll": "All",
+    "filterNews": "News",
+    "filterExhibition": "Exhibitions",
+    "filterProject": "Projects",
+    "filterPublication": "Publications",
+    "filterTeam": "Team",
+    "filterStatic": "Pages",
+    "loading": "Searching…",
+    "notConfigured": "Search is not configured yet."
+  },
+  "Pages": {
+    "museu": {
+      "title": "Museum",
+      "eyebrow": "Meet us",
+      "lead": "A guardian of time in the heart of Lourinhã.",
+      "sections": {
+        "sobre-nos": "About Us",
+        "missao": "Mission",
+        "exposicoes": "Exhibitions",
+        "exposicoesLead": "Discover our Palaeontology, Archaeology, Ethnography collections and the Jurassic Garden.",
+        "exposicoesCta": "View exhibitions",
+        "equipa": "Team",
+        "contacte-nos": "Contact us"
+      }
+    },
+    "exposicoes": {
+      "title": "Exhibitions",
+      "eyebrow": "On display",
+      "sections": {
+        "introducao": "Introduction"
+      }
+    },
+    "geal": {
+      "title": "GEAL",
+      "eyebrow": "Research group",
+      "sections": {
+        "historia-fundadores": "History / Founders",
+        "areas-de-atuacao": "Areas of Activity",
+        "estatutos": "Statutes",
+        "orgaos-sociais": "Governing Bodies",
+        "mesa-assembleia-geral": "General Assembly Board",
+        "direccao": "Board of Directors",
+        "conselho-fiscal": "Audit Committee",
+        "conselho-cientifico": "Scientific Council",
+        "colaboracoes": "Collaborations"
+      }
+    },
+    "visitar": {
+      "title": "Visit",
+      "eyebrow": "Plan your visit",
+      "sections": {
+        "planear-visita": "Plan Your Visit",
+        "bilheteira": "Tickets",
+        "bilheteiraLead": "Buy your ticket online or check our rates.",
+        "bilheteiraCta": "Go to Tickets",
+        "visitas-escolares": "School Visits",
+        "onde-estamos": "Where We Are",
+        "ondeEstamosLead": "You can find us in the heart of Lourinha, close to the historic center with easy access.",
+        "ondeEstamosAddress": "Rua Joao Luis de Moura, 2530-158 Lourinha",
+        "ondeEstamosMapTitle": "Museu da Lourinha location map",
+        "mapa-do-museu": "Museum Map",
+        "mapaMuseuLead": "Use the floor plan to navigate the museum levels and rooms.",
+        "mapaMuseuDescription": "Discover Museu da Lourinhã and embark on a journey through the history of Earth and human presence in the region. Explore exhibitions of Palaeontology, Archaeology, and Ethnology; learn about dinosaur fossils unique in the world, traces of ancient civilizations, and objects that help tell the story of local communities over time. Between the laboratory, dinosaur footprints, interactive experiences, and reference scientific collections, each space invites discovery, curiosity, and a connection between science, heritage, and community.",
+        "mapaMuseuImageAlt": "Museu da Lourinha map",
+        "acessibilidade": "Accessibility",
+        "acessibilidadeLead": "One of Museu da Lourinhã's investments is improving accessibility for visitors. Information is provided in multiple formats, and the full visitor route is accessible for people with reduced mobility. A Guided Field Visit option was also created to provide greater accessibility for visitors and is suitable for people with reduced mobility.",
+        "acessibilidadeImageAlt": "Accessible route outside Museu da Lourinhã",
+        "horario": "Hours",
+        "horarioLead": "Plan your visit with the museum's seasonal opening hours.",
+        "horarioSetJunTitle": "September to June",
+        "horarioSetJunDays": "Open from Tuesday to Sunday",
+        "horarioSetJunMorning": "10:00 am > 1:00 pm",
+        "horarioSetJunAfternoon": "2:00 pm > 6:00 pm",
+        "horarioJulAgoTitle": "July and August",
+        "horarioJulAgoDays": "Open every day",
+        "horarioJulAgoMorning": "10:00 am > 1:00 pm",
+        "horarioJulAgoAfternoon": "2:30 pm > 6:30 pm",
+        "horarioNotaEntrada": "Last entry 30 minutes before closing.",
+        "horarioNotaFecho": "Closed on January 1st, May 1st, Easter Sunday, and December 25th.",
+        "horarioImageAlt": "Museu da Lourinha opening hours poster"
+      }
+    },
+    "bilheteira": {
+      "title": "Tickets",
+      "eyebrow": "Tickets and rates",
+      "sections": {
+        "introducao": "Introduction"
+      }
+    },
+    "investigacao": {
+      "title": "Scientific Research",
+      "eyebrow": "Science at the museum",
+      "sections": {
+        "investigacao": "Research",
+        "equipa-de-investigacao": "Research Team",
+        "projectos-de-investigacao": "Research Projects",
+        "artigos-cientificos": "Scientific Articles",
+        "laboratorio": "Laboratory",
+        "coleccoes": "Collections",
+        "coleccoesLead": "Palaeontology · Archaeology · Ethnography · ZBY · CIID"
+      }
+    },
+    "lojaOnline": {
+      "title": "Online Shop",
+      "eyebrow": "Take home a piece of the museum",
+      "sections": {
+        "introducao": "Introduction"
+      }
+    },
+    "guardioes": {
+      "title": "Guardians",
+      "eyebrow": "Support our mission",
+      "sections": {
+        "como-apoiar": "How to Support",
+        "apoio-corporativo": "Corporate Support",
+        "doar": "Donate",
+        "ser-voluntario": "Volunteer"
+      }
     }
   },
   "Home": {

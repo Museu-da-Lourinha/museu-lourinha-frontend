@@ -10,24 +10,174 @@
   "NavSub": {
     "museu": {
       "sobreNos": "Sobre Nós",
-      "historia": "História",
-      "equipa": "Equipa",
-      "missao": "Missão"
+      "missao": "Missão",
+      "exposicoes": "Exposições",
+      "equipa": "Equipa"
+    },
+    "geal": {
+      "historiaFundadores": "História / Fundadores",
+      "areasAtuacao": "Áreas de Atuação",
+      "estatutos": "Estatutos",
+      "orgaosSociais": "Orgãos Sociais",
+      "mesaAssembleia": "Mesa Assembleia Geral",
+      "direccao": "Direcção",
+      "conselhoFiscal": "Conselho Fiscal",
+      "conselhoCientifico": "Conselho Científico",
+      "colaboracoes": "Colaborações"
     },
     "visitar": {
-      "horarios": "Horários e bilhetes",
-      "comoChegar": "Como chegar",
-      "acessibilidade": "Acessibilidade"
+      "planearVisita": "Planear Visita",
+      "bilheteira": "Bilheteira",
+      "visitasEscolares": "Visitas Escolares",
+      "ondeEstamos": "Onde Estamos",
+      "mapaMuseu": "Mapa do Museu",
+      "acessibilidade": "Acessibilidade",
+      "horario": "Horário"
     },
     "investigacao": {
-      "projetos": "Projetos",
-      "publicacoes": "Publicações",
-      "equipa": "Equipa científica"
+      "investigacao": "Investigação",
+      "equipaInvestigacao": "Equipa de Investigação",
+      "projectosInvestigacao": "Projectos de Investigação",
+      "artigosCientificos": "Artigos Científicos",
+      "laboratorio": "Laboratório",
+      "coleccoes": "Colecções"
     },
     "guardioes": {
-      "tornarSe": "Tornar-se Guardião",
-      "beneficios": "Benefícios",
-      "empresas": "Empresas amigas"
+      "comoApoiar": "Como apoiar",
+      "apoioCorporativo": "Apoio corporativo",
+      "doar": "Doar",
+      "serVoluntario": "Ser voluntário"
+    }
+  },
+  "Search": {
+    "label": "Pesquisar",
+    "placeholder": "Pesquisar no museu…",
+    "openLabel": "Abrir pesquisa",
+    "closeLabel": "Fechar pesquisa",
+    "submitLabel": "Pesquisar",
+    "viewAll": "Ver todos os resultados",
+    "noResults": "Sem resultados para \"{query}\"",
+    "emptyState": "Comece a escrever para pesquisar no museu.",
+    "resultsFor": "Resultados para \"{query}\"",
+    "resultsCount": "{count, plural, =0 {Sem resultados} =1 {1 resultado} other {# resultados}}",
+    "filterAll": "Tudo",
+    "filterNews": "Notícias",
+    "filterExhibition": "Exposições",
+    "filterProject": "Projetos",
+    "filterPublication": "Publicações",
+    "filterTeam": "Equipa",
+    "filterStatic": "Páginas",
+    "loading": "A pesquisar…",
+    "notConfigured": "A pesquisa ainda não está configurada."
+  },
+  "Pages": {
+    "museu": {
+      "title": "Museu",
+      "eyebrow": "Conheça-nos",
+      "lead": "Um guardião do tempo no coração da Lourinhã.",
+      "sections": {
+        "sobre-nos": "Sobre Nós",
+        "missao": "Missão",
+        "exposicoes": "Exposições",
+        "exposicoesLead": "Descubra as nossas coleções de Paleontologia, Arqueologia, Etnografia e o Jardim Jurássico.",
+        "exposicoesCta": "Ver exposições",
+        "equipa": "Equipa",
+        "contacte-nos": "Contacte-nos"
+      }
+    },
+    "exposicoes": {
+      "title": "Exposições",
+      "eyebrow": "Em exibição",
+      "sections": {
+        "introducao": "Introdução"
+      }
+    },
+    "geal": {
+      "title": "GEAL",
+      "eyebrow": "Grupo de Estudos",
+      "sections": {
+        "historia-fundadores": "História / Fundadores",
+        "areas-de-atuacao": "Áreas de Atuação",
+        "estatutos": "Estatutos",
+        "orgaos-sociais": "Orgãos Sociais",
+        "mesa-assembleia-geral": "Mesa Assembleia Geral",
+        "direccao": "Direcção",
+        "conselho-fiscal": "Conselho Fiscal",
+        "conselho-cientifico": "Conselho Científico",
+        "colaboracoes": "Colaborações"
+      }
+    },
+    "visitar": {
+      "title": "Visitar",
+      "eyebrow": "Planeie a sua visita",
+      "sections": {
+        "planear-visita": "Planear Visita",
+        "bilheteira": "Bilheteira",
+        "bilheteiraLead": "Compre o seu bilhete online ou conheça as nossas tarifas.",
+        "bilheteiraCta": "Ir para a Bilheteira",
+        "visitas-escolares": "Visitas Escolares",
+        "onde-estamos": "Onde Estamos",
+        "ondeEstamosLead": "Estamos no coração da Lourinhã, perto do centro histórico e com fácil acesso.",
+        "ondeEstamosAddress": "Rua João Luís de Moura, 2530-158 Lourinhã",
+        "ondeEstamosMapTitle": "Mapa de localização do Museu da Lourinhã",
+        "mapa-do-museu": "Mapa do Museu",
+        "mapaMuseuLead": "Consulte a planta para orientar a sua visita pelos pisos e salas.",
+        "mapaMuseuDescription": "Descubra o Museu da Lourinhã e embarque numa viagem pela história da Terra e da presença humana na região. Explore exposições de Paleontologia, Arqueologia e Etnologia, conheça fósseis de dinossauros únicos no mundo, vestígios de antigas civilizações e objetos que ajudam a contar a história das comunidades locais ao longo do tempo. Entre o laboratório, pegadas de dinossauros, experiências interativas e coleções científicas de referência, cada espaço convida à descoberta, à curiosidade e à ligação entre ciência, património e comunidade.",
+        "mapaMuseuImageAlt": "Planta do Museu da Lourinhã",
+        "acessibilidade": "Acessibilidade",
+        "acessibilidadeLead": "Um dos investimentos do Museu da Lourinhã é o aumento da acessibilidade para os visitantes. Assim, a informação é facultada em vários suportes e todo o percurso feito pelo visitante é acessível a pessoas com mobilidade reduzida. Foi também criada uma opção de Visita Guiada ao Campo que confere maior acessibilidade ao visitante, sendo adequada para pessoas com mobilidade reduzida.",
+        "acessibilidadeImageAlt": "Percurso acessível no exterior do Museu da Lourinhã",
+        "horario": "Horário",
+        "horarioLead": "Planeie a sua visita com os horários sazonais do museu.",
+        "horarioSetJunTitle": "Setembro a Junho",
+        "horarioSetJunDays": "Aberto de terça a domingo",
+        "horarioSetJunMorning": "10h00 > 13h00",
+        "horarioSetJunAfternoon": "14h00 > 18h00",
+        "horarioJulAgoTitle": "Julho e Agosto",
+        "horarioJulAgoDays": "Aberto todos os dias",
+        "horarioJulAgoMorning": "10h00 > 13h00",
+        "horarioJulAgoAfternoon": "14h30 > 18h30",
+        "horarioNotaEntrada": "Ultima entrada 30 min. antes do fecho.",
+        "horarioNotaFecho": "Encerra nos dias 1 de janeiro, 1 de maio, domingo de Pascoa e 25 de dezembro.",
+        "horarioImageAlt": "Cartaz com horario do Museu da Lourinha"
+      }
+    },
+    "bilheteira": {
+      "title": "Bilheteira",
+      "eyebrow": "Bilhetes e tarifas",
+      "sections": {
+        "introducao": "Introdução"
+      }
+    },
+    "investigacao": {
+      "title": "Investigação Científica",
+      "eyebrow": "Ciência no museu",
+      "sections": {
+        "investigacao": "Investigação",
+        "equipa-de-investigacao": "Equipa de Investigação",
+        "projectos-de-investigacao": "Projectos de Investigação",
+        "artigos-cientificos": "Artigos Científicos",
+        "laboratorio": "Laboratório",
+        "coleccoes": "Colecções",
+        "coleccoesLead": "Paleontologia · Arqueologia · Etnografia · ZBY · CIID"
+      }
+    },
+    "lojaOnline": {
+      "title": "Loja Online",
+      "eyebrow": "Leve um pedacinho do museu",
+      "sections": {
+        "introducao": "Introdução"
+      }
+    },
+    "guardioes": {
+      "title": "Guardiões",
+      "eyebrow": "Apoie a missão",
+      "sections": {
+        "como-apoiar": "Como apoiar",
+        "apoio-corporativo": "Apoio corporativo",
+        "doar": "Doar",
+        "ser-voluntario": "Ser voluntário"
+      }
     }
   },
   "Home": {
