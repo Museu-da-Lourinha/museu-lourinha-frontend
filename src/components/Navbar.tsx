@@ -72,7 +72,7 @@ const NAV_TREE: NavItem[] = [
   },
 ];
 
-const TRIGGER_CLASS = "py-4 text-white/90 transition-colors hover:text-white";
+const TRIGGER_CLASS = "py-4 font-semibold text-white/90 transition-colors hover:text-white";
 const UNDERLINE_CLASS = "bg-verde-lima";
 const PANEL_CLASS = "bg-black/40 text-white backdrop-blur-md backdrop-saturate-150";
 const ITEM_CLASS = "border-b border-white/15 last:border-0 hover:bg-white/10 focus-visible:bg-white/10";
@@ -111,22 +111,19 @@ export function Navbar({ locale }: { locale: string }) {
       aria-label="Main navigation"
       className="fixed left-0 right-0 top-0 z-50 overflow-visible bg-transparent backdrop-blur-md backdrop-saturate-150"
     >
-      <Link
-        href="/"
-        className="absolute bottom-3 left-8 z-10 translate-y-[calc(44%+5px)] sm:bottom-4 sm:left-10 sm:translate-y-[calc(44%+5px)]"
-      >
-        <img
-          src="/assets/images/museum-logo-asset-6.svg"
-          alt="Museu da Lourinhã"
-          width={250}
-          height={124}
-          decoding="async"
-          fetchPriority="high"
-          className="h-[3.375rem] w-auto max-w-[14.25rem] object-contain object-left drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:h-[4.75rem] sm:max-w-[16.75rem]"
-        />
-      </Link>
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3 sm:py-3.5">
+        <Link href="/" className="flex shrink-0 items-center">
+          <img
+            src="/assets/images/museum-logo-asset-6.svg"
+            alt="Museu da Lourinhã"
+            width={250}
+            height={124}
+            decoding="async"
+            fetchPriority="high"
+            className="h-[3.375rem] w-auto max-w-[14.25rem] object-contain object-left drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:h-[4.75rem] sm:max-w-[16.75rem]"
+          />
+        </Link>
 
-      <div className="mx-auto flex max-w-7xl justify-end px-6 pb-2 pl-44 pt-3 sm:pl-52 sm:pt-3.5">
         <div className="flex flex-col items-end gap-0">
           <div className="flex items-center gap-2 sm:gap-3">
             <Link
@@ -230,8 +227,6 @@ export function Navbar({ locale }: { locale: string }) {
               );
             })}
           </ul>
-
-          <SearchBar locale={locale as SearchLocale} />
         </div>
       </div>
     </nav>
