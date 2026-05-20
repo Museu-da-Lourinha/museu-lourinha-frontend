@@ -25,7 +25,10 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${dosis.variable} ${barlow.variable} antialiased`}>
+      <body
+        className={`${dosis.variable} ${barlow.variable} antialiased`}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

@@ -9,7 +9,7 @@ const SLIDES = [
   {
     src: "/assets/images/Backgrounds/Paleontologia.png",
     frontSrc: "/assets/images/Backgrounds/Fronts/Paleontologia_front.png",
-    frontClass: "right-[2vw] top-[calc(50%+5svh)] h-[90svh] w-[50vw] -translate-y-1/2",
+    frontClass: "right-[5vw] top-[calc(50%+5svh)] h-[90svh] w-[50vw] -translate-y-1/2",
     icon: "/assets/images/Paleontology/SVG/Pegada.svg",
     iconBgClass: "bg-verde-lima",
     iconColorClass: "bg-azulao",
@@ -29,7 +29,7 @@ const SLIDES = [
   {
     src: "/assets/images/Backgrounds/Etnologia.png",
     frontSrc: "/assets/images/Backgrounds/Fronts/Etnografia_front.png",
-    frontClass: "right-[0vw] top-[calc(50%+5svh)] h-[99svh] w-[55vw] -translate-y-1/2",
+    frontClass: "right-[5vw] top-[calc(50%+5svh)] h-[99svh] w-[55vw] -translate-y-1/2",
     icon: "/assets/images/Etnography/SVG/Bilha.svg",
     iconBgClass: "bg-azul-claro",
     iconColorClass: "bg-laranja",
@@ -102,15 +102,13 @@ export function HeroCarousel() {
             aria-roledescription="slide"
             aria-label={t("slidePosition", { n: i + 1, total: SLIDES.length })}
             aria-hidden={!isActive}
-            className={`absolute inset-0 transition-opacity duration-700 ease-out ${
-              isActive ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 ${isActive ? "opacity-100" : "opacity-0"}`}
           >
             <Image
               src={slide.src}
               alt={t(slide.altKey)}
               fill
-              priority={i === 0}
+              priority
               sizes="100vw"
               className="object-cover object-center"
             />
@@ -123,7 +121,7 @@ export function HeroCarousel() {
                   src={slide.frontSrc}
                   alt=""
                   fill
-                  priority={i === 0}
+                  priority
                   sizes="65vw"
                   className="object-contain object-right"
                 />
@@ -165,48 +163,50 @@ export function HeroCarousel() {
         </div>
       </div>
 
-      <div className="absolute bottom-6 right-6 z-20 flex items-center gap-3 sm:bottom-8 sm:right-12">
-        <span
-          aria-hidden="true"
-          key={SLIDES[index].label}
-          className="font-display pointer-events-none mr-2 text-right text-sm font-semibold uppercase tracking-[0.2em] text-white drop-shadow sm:text-base"
-        >
-          {SLIDES[index].label}
-        </span>
-        {SLIDES.map((slide, i) => {
-          const isActive = i === index;
-          return (
-            <button
-              key={slide.src}
-              type="button"
-              onClick={() => goTo(i)}
-              aria-label={t("goToSlide", { n: i + 1 })}
-              aria-current={isActive ? "true" : undefined}
-              className={`relative flex h-[2.6rem] w-[2.6rem] items-center justify-center border border-white transition-all duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:h-[3.2rem] sm:w-[3.2rem] ${
-                isActive
-                  ? `scale-[1.15] ${slide.iconBgClass}`
-                  : "scale-100 bg-transparent hover:bg-white/10"
-              }`}
-            >
-              <span
-                aria-hidden="true"
-                className={`block h-[1.6rem] w-[1.6rem] transition-colors duration-300 sm:h-8 sm:w-8 ${
-                  isActive ? slide.iconColorClass : "bg-white"
+      <div className="absolute inset-x-0 bottom-6 z-20 sm:bottom-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-end gap-3 px-6">
+          <span
+            aria-hidden="true"
+            key={SLIDES[index].label}
+            className="font-display pointer-events-none mr-2 text-right text-sm font-semibold uppercase tracking-[0.2em] text-white drop-shadow sm:text-base"
+          >
+            {SLIDES[index].label}
+          </span>
+          {SLIDES.map((slide, i) => {
+            const isActive = i === index;
+            return (
+              <button
+                key={slide.src}
+                type="button"
+                onClick={() => goTo(i)}
+                aria-label={t("goToSlide", { n: i + 1 })}
+                aria-current={isActive ? "true" : undefined}
+                className={`relative flex h-[2.34rem] w-[2.34rem] items-center justify-center border border-white transition-all duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:h-[2.88rem] sm:w-[2.88rem] ${
+                  isActive
+                    ? `scale-[1.15] ${slide.iconBgClass}`
+                    : "scale-100 bg-transparent hover:bg-white/10"
                 }`}
-                style={{
-                  WebkitMaskImage: `url(${slide.icon})`,
-                  maskImage: `url(${slide.icon})`,
-                  WebkitMaskRepeat: "no-repeat",
-                  maskRepeat: "no-repeat",
-                  WebkitMaskPosition: "center",
-                  maskPosition: "center",
-                  WebkitMaskSize: "contain",
-                  maskSize: "contain",
-                }}
-              />
-            </button>
-          );
-        })}
+              >
+                <span
+                  aria-hidden="true"
+                  className={`block h-[1.44rem] w-[1.44rem] transition-colors duration-300 sm:h-[1.8rem] sm:w-[1.8rem] ${
+                    isActive ? slide.iconColorClass : "bg-white"
+                  }`}
+                  style={{
+                    WebkitMaskImage: `url(${slide.icon})`,
+                    maskImage: `url(${slide.icon})`,
+                    WebkitMaskRepeat: "no-repeat",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskPosition: "center",
+                    maskPosition: "center",
+                    WebkitMaskSize: "contain",
+                    maskSize: "contain",
+                  }}
+                />
+              </button>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
