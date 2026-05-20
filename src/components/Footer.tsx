@@ -29,6 +29,13 @@ export function Footer() {
                 <a href="tel:+351261413995" className="hover:text-white">
                   +351 261 413 995
                 </a>
+                {" · "}
+                <a
+                  href="mailto:geral@museulourinha.org"
+                  className="hover:text-white"
+                >
+                  {tFooter("contactUs")}
+                </a>
               </p>
               <p>
                 <a

@@ -16,6 +16,7 @@ type NavDropdownProps = {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
   triggerHref?: string;
+  showChevron?: boolean;
   triggerClassName?: string;
   underlineClassName?: string;
   panelClassName?: string;
@@ -31,6 +32,7 @@ export function NavDropdown({
   open: controlledOpen,
   onOpenChange,
   triggerHref,
+  showChevron = true,
   triggerClassName = "",
   underlineClassName = "",
   panelClassName = "",
@@ -119,8 +121,10 @@ export function NavDropdown({
   const chevron = (
     <span
       aria-hidden="true"
-      className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white text-black transition-transform duration-200 ${
-        open ? "rotate-90" : ""
+      className={`flex h-4 w-4 shrink-0 items-center justify-center border border-white text-white transition-all duration-200 ${
+        open
+          ? "rotate-90 bg-verde-lima"
+          : "bg-transparent group-hover:bg-verde-lima"
       }`}
     >
       <svg viewBox="0 0 24 24" fill="none" className="h-2.5 w-2.5">
@@ -139,7 +143,6 @@ export function NavDropdown({
     <div
       ref={rootRef}
       className="relative"
-      onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       {triggerHref ? (
@@ -147,28 +150,32 @@ export function NavDropdown({
           <Link href={triggerHref} className="inline-block">
             {labelContent}
           </Link>
-          <button
-            type="button"
-            ref={triggerRef}
-            onClick={() => setOpen(!open)}
-            aria-haspopup="menu"
-            aria-expanded={open}
-            aria-controls={menuId}
-            aria-label={`${label} – abrir menu`}
-            className="inline-flex"
-          >
-            {chevron}
-          </button>
+          {showChevron ? (
+            <button
+              type="button"
+              ref={triggerRef}
+              onClick={() => setOpen(!open)}
+              onMouseEnter={onMouseEnter}
+              aria-haspopup="menu"
+              aria-expanded={open}
+              aria-controls={menuId}
+              aria-label={`${label} – abrir menu`}
+              className="group inline-flex"
+            >
+              {chevron}
+            </button>
+          ) : null}
         </div>
       ) : (
         <button
           type="button"
           ref={triggerRef}
           onClick={() => setOpen(!open)}
+          onMouseEnter={onMouseEnter}
           aria-haspopup="menu"
           aria-expanded={open}
           aria-controls={menuId}
-          className={`inline-flex items-center gap-2 ${triggerClassName}`}
+          className={`group inline-flex items-center gap-2 ${triggerClassName}`}
         >
           {labelContent}
           {chevron}
@@ -180,6 +187,7 @@ export function NavDropdown({
         role="menu"
         aria-label={label}
         aria-hidden={!open}
+        onMouseEnter={onMouseEnter}
         className={`absolute left-0 top-full mt-3 min-w-[18rem] origin-top shadow-lg transition-[opacity,transform] duration-200 ease-out ${panelClassName} ${
           open
             ? "pointer-events-auto translate-y-0 opacity-100"

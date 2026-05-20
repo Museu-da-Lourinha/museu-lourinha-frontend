@@ -6,9 +6,17 @@ type Props = {
   eyebrow?: string;
   cta?: { label: string; href: string };
   children?: React.ReactNode;
+  contentClassName?: string;
 };
 
-export function Section({ id, title, eyebrow, cta, children }: Props) {
+export function Section({
+  id,
+  title,
+  eyebrow,
+  cta,
+  children,
+  contentClassName,
+}: Props) {
   return (
     <section
       id={id}
@@ -28,7 +36,11 @@ export function Section({ id, title, eyebrow, cta, children }: Props) {
           {title}
         </h2>
 
-        <div className="mt-6 max-w-3xl text-base leading-relaxed text-stone-700 dark:text-stone-300">
+        <div
+          className={`mt-6 max-w-3xl text-base leading-relaxed text-stone-700 dark:text-stone-300 ${
+            contentClassName ?? ""
+          }`}
+        >
           {children ?? <PlaceholderText />}
         </div>
 
